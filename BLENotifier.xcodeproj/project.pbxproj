@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C36000117F4C6E4004860B5 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C36FFFF17F4C6E4004860B5 /* Main_iPhone.storyboard */; };
+		8C36000417F4C6E4004860B5 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C36000217F4C6E4004860B5 /* Main_iPad.storyboard */; };
+		8C36000717F4C6E4004860B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C36000617F4C6E4004860B5 /* ViewController.m */; };
+		8C36000917F4C6E4004860B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C36000817F4C6E4004860B5 /* Images.xcassets */; };
+		8C36001017F4C6E4004860B5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36000F17F4C6E4004860B5 /* XCTest.framework */; };
+		8C36001117F4C6E4004860B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36FFED17F4C6E4004860B5 /* Foundation.framework */; };
+		8C36001217F4C6E4004860B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36FFF117F4C6E4004860B5 /* UIKit.framework */; };
+		8C36001A17F4C6E4004860B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C36001817F4C6E4004860B5 /* InfoPlist.strings */; };
+		8C36001C17F4C6E4004860B5 /* BLENotifierTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C36001B17F4C6E4004860B5 /* BLENotifierTests.m */; };
+		8C36FFEE17F4C6E4004860B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36FFED17F4C6E4004860B5 /* Foundation.framework */; };
+		8C36FFF017F4C6E4004860B5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36FFEF17F4C6E4004860B5 /* CoreGraphics.framework */; };
+		8C36FFF217F4C6E4004860B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36FFF117F4C6E4004860B5 /* UIKit.framework */; };
+		8C36FFF817F4C6E4004860B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C36FFF617F4C6E4004860B5 /* InfoPlist.strings */; };
+		8C36FFFA17F4C6E4004860B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C36FFF917F4C6E4004860B5 /* main.m */; };
+		8C36FFFE17F4C6E4004860B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C36FFFD17F4C6E4004860B5 /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8C36001317F4C6E4004860B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C36FFE217F4C6E4004860B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C36FFE917F4C6E4004860B5;
+			remoteInfo = BLENotifier;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8C36000017F4C6E4004860B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		8C36000317F4C6E4004860B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		8C36000517F4C6E4004860B5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8C36000617F4C6E4004860B5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8C36000817F4C6E4004860B5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8C36000E17F4C6E4004860B5 /* BLENotifierTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLENotifierTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C36000F17F4C6E4004860B5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		8C36001717F4C6E4004860B5 /* BLENotifierTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BLENotifierTests-Info.plist"; sourceTree = "<group>"; };
+		8C36001917F4C6E4004860B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8C36001B17F4C6E4004860B5 /* BLENotifierTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLENotifierTests.m; sourceTree = "<group>"; };
+		8C36FFEA17F4C6E4004860B5 /* BLENotifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLENotifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C36FFED17F4C6E4004860B5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8C36FFEF17F4C6E4004860B5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8C36FFF117F4C6E4004860B5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8C36FFF517F4C6E4004860B5 /* BLENotifier-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BLENotifier-Info.plist"; sourceTree = "<group>"; };
+		8C36FFF717F4C6E4004860B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8C36FFF917F4C6E4004860B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8C36FFFB17F4C6E4004860B5 /* BLENotifier-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BLENotifier-Prefix.pch"; sourceTree = "<group>"; };
+		8C36FFFC17F4C6E4004860B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8C36FFFD17F4C6E4004860B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8C36000B17F4C6E4004860B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C36001017F4C6E4004860B5 /* XCTest.framework in Frameworks */,
+				8C36001217F4C6E4004860B5 /* UIKit.framework in Frameworks */,
+				8C36001117F4C6E4004860B5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C36FFE717F4C6E4004860B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C36FFF017F4C6E4004860B5 /* CoreGraphics.framework in Frameworks */,
+				8C36FFF217F4C6E4004860B5 /* UIKit.framework in Frameworks */,
+				8C36FFEE17F4C6E4004860B5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8C36001517F4C6E4004860B5 /* BLENotifierTests */ = {
+			isa = PBXGroup;
+			children = (
+				8C36001B17F4C6E4004860B5 /* BLENotifierTests.m */,
+				8C36001617F4C6E4004860B5 /* Supporting Files */,
+			);
+			path = BLENotifierTests;
+			sourceTree = "<group>";
+		};
+		8C36001617F4C6E4004860B5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8C36001717F4C6E4004860B5 /* BLENotifierTests-Info.plist */,
+				8C36001817F4C6E4004860B5 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8C36FFE117F4C6E4004860B5 = {
+			isa = PBXGroup;
+			children = (
+				8C36FFF317F4C6E4004860B5 /* BLENotifier */,
+				8C36001517F4C6E4004860B5 /* BLENotifierTests */,
+				8C36FFEC17F4C6E4004860B5 /* Frameworks */,
+				8C36FFEB17F4C6E4004860B5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8C36FFEB17F4C6E4004860B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C36FFEA17F4C6E4004860B5 /* BLENotifier.app */,
+				8C36000E17F4C6E4004860B5 /* BLENotifierTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C36FFEC17F4C6E4004860B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C36FFED17F4C6E4004860B5 /* Foundation.framework */,
+				8C36FFEF17F4C6E4004860B5 /* CoreGraphics.framework */,
+				8C36FFF117F4C6E4004860B5 /* UIKit.framework */,
+				8C36000F17F4C6E4004860B5 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C36FFF317F4C6E4004860B5 /* BLENotifier */ = {
+			isa = PBXGroup;
+			children = (
+				8C36FFFC17F4C6E4004860B5 /* AppDelegate.h */,
+				8C36FFFD17F4C6E4004860B5 /* AppDelegate.m */,
+				8C36FFFF17F4C6E4004860B5 /* Main_iPhone.storyboard */,
+				8C36000217F4C6E4004860B5 /* Main_iPad.storyboard */,
+				8C36000517F4C6E4004860B5 /* ViewController.h */,
+				8C36000617F4C6E4004860B5 /* ViewController.m */,
+				8C36000817F4C6E4004860B5 /* Images.xcassets */,
+				8C36FFF417F4C6E4004860B5 /* Supporting Files */,
+			);
+			path = BLENotifier;
+			sourceTree = "<group>";
+		};
+		8C36FFF417F4C6E4004860B5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8C36FFF517F4C6E4004860B5 /* BLENotifier-Info.plist */,
+				8C36FFF617F4C6E4004860B5 /* InfoPlist.strings */,
+				8C36FFF917F4C6E4004860B5 /* main.m */,
+				8C36FFFB17F4C6E4004860B5 /* BLENotifier-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8C36000D17F4C6E4004860B5 /* BLENotifierTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C36002217F4C6E4004860B5 /* Build configuration list for PBXNativeTarget "BLENotifierTests" */;
+			buildPhases = (
+				8C36000A17F4C6E4004860B5 /* Sources */,
+				8C36000B17F4C6E4004860B5 /* Frameworks */,
+				8C36000C17F4C6E4004860B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C36001417F4C6E4004860B5 /* PBXTargetDependency */,
+			);
+			name = BLENotifierTests;
+			productName = BLENotifierTests;
+			productReference = 8C36000E17F4C6E4004860B5 /* BLENotifierTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8C36FFE917F4C6E4004860B5 /* BLENotifier */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C36001F17F4C6E4004860B5 /* Build configuration list for PBXNativeTarget "BLENotifier" */;
+			buildPhases = (
+				8C36FFE617F4C6E4004860B5 /* Sources */,
+				8C36FFE717F4C6E4004860B5 /* Frameworks */,
+				8C36FFE817F4C6E4004860B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BLENotifier;
+			productName = BLENotifier;
+			productReference = 8C36FFEA17F4C6E4004860B5 /* BLENotifier.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8C36FFE217F4C6E4004860B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Michal Binovsky";
+				TargetAttributes = {
+					8C36000D17F4C6E4004860B5 = {
+						TestTargetID = 8C36FFE917F4C6E4004860B5;
+					};
+				};
+			};
+			buildConfigurationList = 8C36FFE517F4C6E4004860B5 /* Build configuration list for PBXProject "BLENotifier" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8C36FFE117F4C6E4004860B5;
+			productRefGroup = 8C36FFEB17F4C6E4004860B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8C36FFE917F4C6E4004860B5 /* BLENotifier */,
+				8C36000D17F4C6E4004860B5 /* BLENotifierTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8C36000C17F4C6E4004860B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C36001A17F4C6E4004860B5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C36FFE817F4C6E4004860B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C36000417F4C6E4004860B5 /* Main_iPad.storyboard in Resources */,
+				8C36000917F4C6E4004860B5 /* Images.xcassets in Resources */,
+				8C36000117F4C6E4004860B5 /* Main_iPhone.storyboard in Resources */,
+				8C36FFF817F4C6E4004860B5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8C36000A17F4C6E4004860B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C36001C17F4C6E4004860B5 /* BLENotifierTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C36FFE617F4C6E4004860B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C36000717F4C6E4004860B5 /* ViewController.m in Sources */,
+				8C36FFFE17F4C6E4004860B5 /* AppDelegate.m in Sources */,
+				8C36FFFA17F4C6E4004860B5 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8C36001417F4C6E4004860B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C36FFE917F4C6E4004860B5 /* BLENotifier */;
+			targetProxy = 8C36001317F4C6E4004860B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8C36000217F4C6E4004860B5 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C36000317F4C6E4004860B5 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		8C36001817F4C6E4004860B5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C36001917F4C6E4004860B5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8C36FFF617F4C6E4004860B5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C36FFF717F4C6E4004860B5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8C36FFFF17F4C6E4004860B5 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C36000017F4C6E4004860B5 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8C36001D17F4C6E4004860B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8C36001E17F4C6E4004860B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8C36002017F4C6E4004860B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BLENotifier/BLENotifier-Prefix.pch";
+				INFOPLIST_FILE = "BLENotifier/BLENotifier-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8C36002117F4C6E4004860B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BLENotifier/BLENotifier-Prefix.pch";
+				INFOPLIST_FILE = "BLENotifier/BLENotifier-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8C36002317F4C6E4004860B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BLENotifier.app/BLENotifier";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BLENotifier/BLENotifier-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BLENotifierTests/BLENotifierTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		8C36002417F4C6E4004860B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BLENotifier.app/BLENotifier";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BLENotifier/BLENotifier-Prefix.pch";
+				INFOPLIST_FILE = "BLENotifierTests/BLENotifierTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8C36001F17F4C6E4004860B5 /* Build configuration list for PBXNativeTarget "BLENotifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C36002017F4C6E4004860B5 /* Debug */,
+				8C36002117F4C6E4004860B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8C36002217F4C6E4004860B5 /* Build configuration list for PBXNativeTarget "BLENotifierTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C36002317F4C6E4004860B5 /* Debug */,
+				8C36002417F4C6E4004860B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8C36FFE517F4C6E4004860B5 /* Build configuration list for PBXProject "BLENotifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C36001D17F4C6E4004860B5 /* Debug */,
+				8C36001E17F4C6E4004860B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8C36FFE217F4C6E4004860B5 /* Project object */;
+}
