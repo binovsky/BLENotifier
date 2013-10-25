@@ -8,6 +8,7 @@
 
 #import "NotifierCore.h"
 
+#pragma mark - private @interface NotifierCore
 @interface NotifierCore()
 {
     CBPeripheralManager     *_peripheralManager;
@@ -15,8 +16,10 @@
 
 @end
 
+#pragma mark - @implementation NotifierCore
 @implementation NotifierCore
 
+#pragma mark - Override
 - (void)dealloc
 {
     SAFE_RELEASE( _peripheralManager );
@@ -24,7 +27,15 @@
     [super dealloc];
 }
 
-- (void)startPeriperalRole
+#pragma mark - Custom
+- (void)startPeriperalRoleSession
+{
+    _ASSERT( !_peripheralManager );
+    _peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil options:nil];
+}
+
+#pragma mark - CBPeripheralManagerDelegate
+- (void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral
 {
     
 }

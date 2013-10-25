@@ -10,6 +10,8 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 
+#pragma GCC diagnostic ignored "-Wwarning-flag"
+
 static NSString *const FONT_TYPE_KEY	= @"FontType";
 
 @implementation UILabel (CustomFont)
@@ -17,10 +19,6 @@ static NSString *const FONT_TYPE_KEY	= @"FontType";
 - (UIFont *)customFont
 {
 	UIFont *fnt = [self customFont];
-    
-//    if( [[fnt familyName] isEqualToString:DEFAULT_SPECIAL_FONT_NAME] || [[fnt familyName] isEqualToString:DEFAULT_UNICODE_FONT_NAME] )
-//        return fnt;
-    
 	CGFloat fontSize = [fnt pointSize];
 	
 	NSNumber *numFontType = (NSNumber *)objc_getAssociatedObject( fnt, FONT_TYPE_KEY );

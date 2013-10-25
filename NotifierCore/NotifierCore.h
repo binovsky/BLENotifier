@@ -5,9 +5,14 @@
 //  Created by Michal Binovsky on 25/10/13.
 //  Copyright (c) 2013 Michal Binovsky. All rights reserved.
 //
+#import <CoreBluetooth/CBPeripheralManager.h>
 
-@interface NotifierCore : NSObject
+#pragma mark - @interface NotifierCore
+@interface NotifierCore : NSObject < CBPeripheralManagerDelegate >
 {
 }
+
+    #pragma mark - Instanance Methods
+    - (void)startPeriperalRoleSession;
 
 @end
