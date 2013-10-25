@@ -37,8 +37,10 @@
     [lbl setTextAlignment:NSTextAlignmentCenter];
     [[self view] addSubview:lbl];
     
-    [[self view] addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[lbl]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings( lbl )]];
-    [[self view] addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(100)-[lbl(50)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings( lbl )]];
+    [[self view] addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[lbl(100)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings( lbl )]];
+    [[self view] addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[lbl(50)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings( lbl )]];
+    [[self view] addConstraint:[NSLayoutConstraint constraintWithItem:[self view] attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:lbl attribute:NSLayoutAttributeCenterX multiplier:1.f constant:0.f]];
+    [[self view] addConstraint:[NSLayoutConstraint constraintWithItem:[self view] attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:lbl attribute:NSLayoutAttributeCenterY multiplier:1.f constant:0.f]];
     
     [lbl release];
 }
