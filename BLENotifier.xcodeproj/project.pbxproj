@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C36000717F4C6E4004860B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C36000617F4C6E4004860B5 /* ViewController.m */; };
 		8C36000917F4C6E4004860B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C36000817F4C6E4004860B5 /* Images.xcassets */; };
 		8C36001017F4C6E4004860B5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36000F17F4C6E4004860B5 /* XCTest.framework */; };
 		8C36001117F4C6E4004860B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36FFED17F4C6E4004860B5 /* Foundation.framework */; };
@@ -20,6 +19,13 @@
 		8C36FFF817F4C6E4004860B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C36FFF617F4C6E4004860B5 /* InfoPlist.strings */; };
 		8C36FFFA17F4C6E4004860B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C36FFF917F4C6E4004860B5 /* main.m */; };
 		8C36FFFE17F4C6E4004860B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C36FFFD17F4C6E4004860B5 /* AppDelegate.m */; };
+		8CB1AF04181AA5E3008E0D53 /* Apache License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8CB1AEFF181AA5E3008E0D53 /* Apache License.txt */; };
+		8CB1AF05181AA5E3008E0D53 /* OpenSans-CondBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CB1AF00181AA5E3008E0D53 /* OpenSans-CondBold.ttf */; };
+		8CB1AF06181AA5E3008E0D53 /* OpenSans-CondLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CB1AF01181AA5E3008E0D53 /* OpenSans-CondLight.ttf */; };
+		8CB1AF07181AA5E3008E0D53 /* OpenSans-CondLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CB1AF02181AA5E3008E0D53 /* OpenSans-CondLightItalic.ttf */; };
+		8CB1AF0D181AA98D008E0D53 /* UILabel+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1AF0C181AA98D008E0D53 /* UILabel+Custom.m */; };
+		8CB1AF11181AA9B9008E0D53 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1AF10181AA9B9008E0D53 /* ViewController.m */; };
+		8CB1AF17181AAC45008E0D53 /* CommonFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1AF16181AAC45008E0D53 /* CommonFont.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,8 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8C36000517F4C6E4004860B5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8C36000617F4C6E4004860B5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8C36000817F4C6E4004860B5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8C36000E17F4C6E4004860B5 /* BLENotifierTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLENotifierTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C36000F17F4C6E4004860B5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -51,6 +55,19 @@
 		8C36FFFB17F4C6E4004860B5 /* BLENotifier-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BLENotifier-Prefix.pch"; sourceTree = "<group>"; };
 		8C36FFFC17F4C6E4004860B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8C36FFFD17F4C6E4004860B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8CB1AEFF181AA5E3008E0D53 /* Apache License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Apache License.txt"; sourceTree = "<group>"; };
+		8CB1AF00181AA5E3008E0D53 /* OpenSans-CondBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-CondBold.ttf"; sourceTree = "<group>"; };
+		8CB1AF01181AA5E3008E0D53 /* OpenSans-CondLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-CondLight.ttf"; sourceTree = "<group>"; };
+		8CB1AF02181AA5E3008E0D53 /* OpenSans-CondLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-CondLightItalic.ttf"; sourceTree = "<group>"; };
+		8CB1AF0A181AA96D008E0D53 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		8CB1AF0B181AA98D008E0D53 /* UILabel+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Custom.h"; sourceTree = "<group>"; };
+		8CB1AF0C181AA98D008E0D53 /* UILabel+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Custom.m"; sourceTree = "<group>"; };
+		8CB1AF0F181AA9B9008E0D53 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8CB1AF10181AA9B9008E0D53 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8CB1AF12181AAAB7008E0D53 /* Categories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
+		8CB1AF14181AABFD008E0D53 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		8CB1AF15181AAC45008E0D53 /* CommonFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonFont.h; sourceTree = "<group>"; };
+		8CB1AF16181AAC45008E0D53 /* CommonFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonFont.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,10 +145,10 @@
 		8C36FFF317F4C6E4004860B5 /* BLENotifier */ = {
 			isa = PBXGroup;
 			children = (
+				8CB1AF0E181AA9B9008E0D53 /* App */,
+				8CB1AF08181AA86B008E0D53 /* Common */,
 				8C36FFFC17F4C6E4004860B5 /* AppDelegate.h */,
 				8C36FFFD17F4C6E4004860B5 /* AppDelegate.m */,
-				8C36000517F4C6E4004860B5 /* ViewController.h */,
-				8C36000617F4C6E4004860B5 /* ViewController.m */,
 				8C36000817F4C6E4004860B5 /* Images.xcassets */,
 				8C36FFF417F4C6E4004860B5 /* Supporting Files */,
 			);
@@ -141,12 +158,79 @@
 		8C36FFF417F4C6E4004860B5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8CB1AEFD181AA5E3008E0D53 /* Resources */,
 				8C36FFF517F4C6E4004860B5 /* BLENotifier-Info.plist */,
 				8C36FFF617F4C6E4004860B5 /* InfoPlist.strings */,
 				8C36FFF917F4C6E4004860B5 /* main.m */,
 				8C36FFFB17F4C6E4004860B5 /* BLENotifier-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8CB1AEFD181AA5E3008E0D53 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8CB1AEFE181AA5E3008E0D53 /* font */,
+				8CB1AF03181AA5E3008E0D53 /* images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8CB1AEFE181AA5E3008E0D53 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				8CB1AEFF181AA5E3008E0D53 /* Apache License.txt */,
+				8CB1AF00181AA5E3008E0D53 /* OpenSans-CondBold.ttf */,
+				8CB1AF01181AA5E3008E0D53 /* OpenSans-CondLight.ttf */,
+				8CB1AF02181AA5E3008E0D53 /* OpenSans-CondLightItalic.ttf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
+		8CB1AF03181AA5E3008E0D53 /* images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		8CB1AF08181AA86B008E0D53 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8CB1AF13181AABF1008E0D53 /* CommonMacros */,
+				8CB1AF09181AA86B008E0D53 /* Categories */,
+				8CB1AF0A181AA96D008E0D53 /* Common.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8CB1AF09181AA86B008E0D53 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				8CB1AF0B181AA98D008E0D53 /* UILabel+Custom.h */,
+				8CB1AF0C181AA98D008E0D53 /* UILabel+Custom.m */,
+				8CB1AF12181AAAB7008E0D53 /* Categories.h */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		8CB1AF0E181AA9B9008E0D53 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8CB1AF0F181AA9B9008E0D53 /* ViewController.h */,
+				8CB1AF10181AA9B9008E0D53 /* ViewController.m */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8CB1AF13181AABF1008E0D53 /* CommonMacros */ = {
+			isa = PBXGroup;
+			children = (
+				8CB1AF14181AABFD008E0D53 /* Macros.h */,
+				8CB1AF15181AAC45008E0D53 /* CommonFont.h */,
+				8CB1AF16181AAC45008E0D53 /* CommonFont.m */,
+			);
+			path = CommonMacros;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,8 +317,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CB1AF07181AA5E3008E0D53 /* OpenSans-CondLightItalic.ttf in Resources */,
 				8C36000917F4C6E4004860B5 /* Images.xcassets in Resources */,
+				8CB1AF04181AA5E3008E0D53 /* Apache License.txt in Resources */,
+				8CB1AF05181AA5E3008E0D53 /* OpenSans-CondBold.ttf in Resources */,
 				8C36FFF817F4C6E4004860B5 /* InfoPlist.strings in Resources */,
+				8CB1AF06181AA5E3008E0D53 /* OpenSans-CondLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,9 +341,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C36000717F4C6E4004860B5 /* ViewController.m in Sources */,
+				8CB1AF0D181AA98D008E0D53 /* UILabel+Custom.m in Sources */,
 				8C36FFFE17F4C6E4004860B5 /* AppDelegate.m in Sources */,
 				8C36FFFA17F4C6E4004860B5 /* main.m in Sources */,
+				8CB1AF11181AA9B9008E0D53 /* ViewController.m in Sources */,
+				8CB1AF17181AAC45008E0D53 /* CommonFont.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,10 +456,17 @@
 		8C36002017F4C6E4004860B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BLENotifier/BLENotifier-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/BLENotifier/Common",
+					"$(SRCROOT)/BLENotifier/App",
+				);
 				INFOPLIST_FILE = "BLENotifier/BLENotifier-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -379,10 +476,17 @@
 		8C36002117F4C6E4004860B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BLENotifier/BLENotifier-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/BLENotifier/Common",
+					"$(SRCROOT)/BLENotifier/App",
+				);
 				INFOPLIST_FILE = "BLENotifier/BLENotifier-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
