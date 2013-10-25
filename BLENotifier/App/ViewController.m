@@ -46,7 +46,7 @@
     
     NotifierCore *core = [NotifierCore new];
     [core startPeriperalRoleSession];
-    SAFE_RELEASE( core );
+//    SAFE_RELEASE( core );
 }
 
 - (void)didReceiveMemoryWarning
