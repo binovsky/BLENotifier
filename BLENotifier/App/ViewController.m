@@ -43,6 +43,10 @@
     [[self view] addConstraint:[NSLayoutConstraint constraintWithItem:[self view] attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:lbl attribute:NSLayoutAttributeCenterY multiplier:1.f constant:0.f]];
     
     [lbl release];
+    
+    NotifierCore *core = [NotifierCore new];
+    [core startPeriperalRoleSession];
+    SAFE_RELEASE( core );
 }
 
 - (void)didReceiveMemoryWarning

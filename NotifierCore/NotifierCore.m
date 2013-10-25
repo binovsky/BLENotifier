@@ -37,7 +37,7 @@
 #pragma mark - CBPeripheralManagerDelegate
 - (void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral
 {
-    
+    _ASSERT( [_peripheralManager isEqual:peripheral] );
 }
 
 @end

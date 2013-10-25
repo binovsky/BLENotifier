@@ -36,6 +36,9 @@
 		8CB1AF35181AB3B2008E0D53 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8CB1AF33181AB3B2008E0D53 /* InfoPlist.strings */; };
 		8CB1AF37181AB3B2008E0D53 /* NotifierCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1AF36181AB3B2008E0D53 /* NotifierCoreTests.m */; };
 		8CB1AF3F181AB955008E0D53 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB1AF3E181AB955008E0D53 /* CoreBluetooth.framework */; };
+		8CDD83FD181AF9D700088864 /* libNotifierCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB1AF1C181AB3B2008E0D53 /* libNotifierCore.a */; };
+		8CDD83FF181AFBFB00088864 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CDD83FE181AFBFB00088864 /* CFNetwork.framework */; };
+		8CDD8400181AFD0000088864 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB1AF3E181AB955008E0D53 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,13 @@
 			remoteInfo = BLENotifier;
 		};
 		8CB1AF2D181AB3B2008E0D53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C36FFE217F4C6E4004860B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8CB1AF1B181AB3B2008E0D53;
+			remoteInfo = NotifierCore;
+		};
+		8CB1AF43181AF418008E0D53 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8C36FFE217F4C6E4004860B5 /* Project object */;
 			proxyType = 1;
@@ -108,6 +118,7 @@
 		8CB1AF36181AB3B2008E0D53 /* NotifierCoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotifierCoreTests.m; sourceTree = "<group>"; };
 		8CB1AF3E181AB955008E0D53 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		8CB1AF40181ABC1D008E0D53 /* VariosMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VariosMacros.h; sourceTree = "<group>"; };
+		8CDD83FE181AFBFB00088864 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +136,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CDD8400181AFD0000088864 /* CoreBluetooth.framework in Frameworks */,
+				8CDD83FD181AF9D700088864 /* libNotifierCore.a in Frameworks */,
 				8C36FFF017F4C6E4004860B5 /* CoreGraphics.framework in Frameworks */,
 				8C36FFF217F4C6E4004860B5 /* UIKit.framework in Frameworks */,
 				8C36FFEE17F4C6E4004860B5 /* Foundation.framework in Frameworks */,
@@ -135,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CDD83FF181AFBFB00088864 /* CFNetwork.framework in Frameworks */,
 				8CB1AF3F181AB955008E0D53 /* CoreBluetooth.framework in Frameworks */,
 				8CB1AF1D181AB3B2008E0D53 /* Foundation.framework in Frameworks */,
 			);
@@ -198,6 +212,7 @@
 		8C36FFEC17F4C6E4004860B5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8CDD83FE181AFBFB00088864 /* CFNetwork.framework */,
 				8CB1AF3E181AB955008E0D53 /* CoreBluetooth.framework */,
 				8C36FFED17F4C6E4004860B5 /* Foundation.framework */,
 				8C36FFEF17F4C6E4004860B5 /* CoreGraphics.framework */,
@@ -367,6 +382,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				8CB1AF44181AF418008E0D53 /* PBXTargetDependency */,
 			);
 			name = BLENotifier;
 			productName = BLENotifier;
@@ -528,6 +544,11 @@
 			target = 8CB1AF1B181AB3B2008E0D53 /* NotifierCore */;
 			targetProxy = 8CB1AF2D181AB3B2008E0D53 /* PBXContainerItemProxy */;
 		};
+		8CB1AF44181AF418008E0D53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8CB1AF1B181AB3B2008E0D53 /* NotifierCore */;
+			targetProxy = 8CB1AF43181AF418008E0D53 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -643,9 +664,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(SRCROOT)",
-					"$(SRCROOT)/BLENotifier/Common",
-					"$(SRCROOT)/BLENotifier/App",
+					"$(SRCROOT)/BLENotifier",
+					"$(SRCROOT)/NotifierCore",
 				);
 				INFOPLIST_FILE = "BLENotifier/BLENotifier-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -664,9 +684,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(SRCROOT)",
-					"$(SRCROOT)/BLENotifier/Common",
-					"$(SRCROOT)/BLENotifier/App",
+					"$(SRCROOT)/BLENotifier",
+					"$(SRCROOT)/NotifierCore",
 				);
 				INFOPLIST_FILE = "BLENotifier/BLENotifier-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -729,6 +748,7 @@
 		8CB1AF39181AB3B2008E0D53 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/NotifierCore.dst;
@@ -737,6 +757,12 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/BLENotifier",
+					"$(SRCROOT)/NotifierCore",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -747,11 +773,18 @@
 		8CB1AF3A181AB3B2008E0D53 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/NotifierCore.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NotifierCore/NotifierCore-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/BLENotifier",
+					"$(SRCROOT)/NotifierCore",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -839,6 +872,7 @@
 				8CB1AF3A181AB3B2008E0D53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8CB1AF3B181AB3B2008E0D53 /* Build configuration list for PBXNativeTarget "NotifierCoreTests" */ = {
 			isa = XCConfigurationList;
@@ -847,6 +881,7 @@
 				8CB1AF3D181AB3B2008E0D53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
