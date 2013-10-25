@@ -14,9 +14,9 @@ static NSString *const FONT_TYPE_KEY	= @"FontType";
 
 @implementation UILabel (CustomFont)
 
-- (UIFont *)sygicFont
+- (UIFont *)customFont
 {
-	UIFont *fnt = [self sygicFont];
+	UIFont *fnt = [self customFont];
     
 //    if( [[fnt familyName] isEqualToString:DEFAULT_SPECIAL_FONT_NAME] || [[fnt familyName] isEqualToString:DEFAULT_UNICODE_FONT_NAME] )
 //        return fnt;
