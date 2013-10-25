@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Michal Binovsky. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 @interface NotifierCore : NSObject
+{
+}
 
 @end

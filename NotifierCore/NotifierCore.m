@@ -8,6 +8,25 @@
 
 #import "NotifierCore.h"
 
+@interface NotifierCore()
+{
+    CBPeripheralManager     *_peripheralManager;
+}
+
+@end
+
 @implementation NotifierCore
+
+- (void)dealloc
+{
+    SAFE_RELEASE( _peripheralManager );
+    
+    [super dealloc];
+}
+
+- (void)startPeriperalRole
+{
+    
+}
 
 @end

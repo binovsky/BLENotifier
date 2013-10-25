@@ -35,6 +35,7 @@
 		8CB1AF2F181AB3B2008E0D53 /* libNotifierCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB1AF1C181AB3B2008E0D53 /* libNotifierCore.a */; };
 		8CB1AF35181AB3B2008E0D53 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8CB1AF33181AB3B2008E0D53 /* InfoPlist.strings */; };
 		8CB1AF37181AB3B2008E0D53 /* NotifierCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1AF36181AB3B2008E0D53 /* NotifierCoreTests.m */; };
+		8CB1AF3F181AB955008E0D53 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB1AF3E181AB955008E0D53 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,8 @@
 		8CB1AF32181AB3B2008E0D53 /* NotifierCoreTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NotifierCoreTests-Info.plist"; sourceTree = "<group>"; };
 		8CB1AF34181AB3B2008E0D53 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8CB1AF36181AB3B2008E0D53 /* NotifierCoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotifierCoreTests.m; sourceTree = "<group>"; };
+		8CB1AF3E181AB955008E0D53 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		8CB1AF40181ABC1D008E0D53 /* VariosMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VariosMacros.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CB1AF3F181AB955008E0D53 /* CoreBluetooth.framework in Frameworks */,
 				8CB1AF1D181AB3B2008E0D53 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,6 +198,7 @@
 		8C36FFEC17F4C6E4004860B5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8CB1AF3E181AB955008E0D53 /* CoreBluetooth.framework */,
 				8C36FFED17F4C6E4004860B5 /* Foundation.framework */,
 				8C36FFEF17F4C6E4004860B5 /* CoreGraphics.framework */,
 				8C36FFF117F4C6E4004860B5 /* UIKit.framework */,
@@ -289,6 +294,7 @@
 				8CB1AF14181AABFD008E0D53 /* Macros.h */,
 				8CB1AF15181AAC45008E0D53 /* CommonFont.h */,
 				8CB1AF16181AAC45008E0D53 /* CommonFont.m */,
+				8CB1AF40181ABC1D008E0D53 /* VariosMacros.h */,
 			);
 			path = CommonMacros;
 			sourceTree = "<group>";
@@ -684,6 +690,11 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/BLENotifier/Common",
+				);
 				INFOPLIST_FILE = "BLENotifierTests/BLENotifierTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -703,6 +714,11 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BLENotifier/BLENotifier-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/BLENotifier/Common",
+				);
 				INFOPLIST_FILE = "BLENotifierTests/BLENotifierTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -714,7 +730,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/NotifierCore.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NotifierCore/NotifierCore-Prefix.pch";
@@ -732,7 +748,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/NotifierCore.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NotifierCore/NotifierCore-Prefix.pch";

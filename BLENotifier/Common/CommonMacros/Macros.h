@@ -10,5 +10,6 @@
 #define BLENotifier_Macros_h
 
 #import "CommonFont.h"
+#import "VariosMacros.h"
 
 #endif
