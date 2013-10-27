@@ -33,7 +33,7 @@
     UILabel *lbl = [UILabel new];
     [lbl setTranslatesAutoresizingMaskIntoConstraints:NO];
     [lbl setText:@"Hello World"];
-    [lbl setFont:[UIFont systemFontOfSize:44.f]];
+    [lbl setFont:[UIFont systemFontOfSize:60.f]];
     [lbl setTextAlignment:NSTextAlignmentCenter];
     [[self view] addSubview:lbl];
     

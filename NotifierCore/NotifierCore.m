@@ -22,6 +22,7 @@
 #pragma mark - Override
 - (void)dealloc
 {
+    [_peripheralManager setDelegate:nil];
     SAFE_RELEASE( _peripheralManager );
     
     [super dealloc];
