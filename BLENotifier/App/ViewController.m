@@ -32,21 +32,21 @@
     
     UILabel *lbl = [UILabel new];
     [lbl setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [lbl setBackgroundColor:[UIColor clearColor]];
     [lbl setText:@"Hello World"];
     [lbl setFont:[UIFont systemFontOfSize:60.f]];
     [lbl setTextAlignment:NSTextAlignmentCenter];
     [[self view] addSubview:lbl];
     
-    [[self view] addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[lbl(300)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings( lbl )]];
-    [[self view] addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[lbl(50)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings( lbl )]];
+    [[self view] addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(10)-[lbl]-(10)-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings( lbl )]];
+    [[self view] addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[lbl(80)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings( lbl )]];
     [[self view] addConstraint:[NSLayoutConstraint constraintWithItem:[self view] attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:lbl attribute:NSLayoutAttributeCenterX multiplier:1.f constant:0.f]];
     [[self view] addConstraint:[NSLayoutConstraint constraintWithItem:[self view] attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:lbl attribute:NSLayoutAttributeCenterY multiplier:1.f constant:0.f]];
     
     [lbl release];
     
     NotifierCore *core = [NotifierCore instance];
-    [core startPeriperalRoleSession];
-//    SAFE_RELEASE( core );
+    [core startPeripheralRoleSession];
 }
 
 - (void)didReceiveMemoryWarning

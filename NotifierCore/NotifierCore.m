@@ -74,10 +74,16 @@ static	NotifierCore	*_instance	=	nil;
 }
 
 #pragma mark - Custom
-- (void)startPeriperalRoleSession
+- (void)startPeripheralRoleSession
 {
     _ASSERT( !_peripheralManager );
     _peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil options:nil];
+}
+
+- (void)stopPeripheralRoleSession
+{
+    [_peripheralManager stopAdvertising];
+    [_peripheralManager removeAllServices];
 }
 
 #pragma mark - CBPeripheralManagerDelegate

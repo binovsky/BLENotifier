@@ -22,3 +22,11 @@
 #endif
 
 #define _ASSERT_ONCE { static INT c = 0; assert(++c == 1); }
+
+// iOS objective-c console log
+#ifdef _DEBUG
+#define DLog(...) NSLog(__VA_ARGS__)
+#else
+#define DLog(...) /* */
+#endif
+#define ALog(...) NSLog(__VA_ARGS__)

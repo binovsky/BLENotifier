@@ -22,6 +22,7 @@
     + ( NotifierCore * )instance;
 
     #pragma mark - Instanance Methods
-    - (void)startPeriperalRoleSession;
+    - (void)startPeripheralRoleSession;
+    - (void)stopPeripheralRoleSession;
 
 @end
