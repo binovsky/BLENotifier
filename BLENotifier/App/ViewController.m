@@ -44,7 +44,7 @@
     
     [lbl release];
     
-    NotifierCore *core = [NotifierCore new];
+    NotifierCore *core = [NotifierCore instance];
     [core startPeriperalRoleSession];
 //    SAFE_RELEASE( core );
 }
