@@ -19,6 +19,9 @@
 		8C36FFF817F4C6E4004860B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C36FFF617F4C6E4004860B5 /* InfoPlist.strings */; };
 		8C36FFFA17F4C6E4004860B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C36FFF917F4C6E4004860B5 /* main.m */; };
 		8C36FFFE17F4C6E4004860B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C36FFFD17F4C6E4004860B5 /* AppDelegate.m */; };
+		8CAD2E62181ED28F007C5743 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAD2E61181ED28F007C5743 /* CoreLocation.framework */; };
+		8CAD2E63181ED2B2007C5743 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB1AF3E181AB955008E0D53 /* CoreBluetooth.framework */; };
+		8CAD2E64181ED2B9007C5743 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAD2E61181ED28F007C5743 /* CoreLocation.framework */; };
 		8CB1AF04181AA5E3008E0D53 /* Apache License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8CB1AEFF181AA5E3008E0D53 /* Apache License.txt */; };
 		8CB1AF05181AA5E3008E0D53 /* OpenSans-CondBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CB1AF00181AA5E3008E0D53 /* OpenSans-CondBold.ttf */; };
 		8CB1AF06181AA5E3008E0D53 /* OpenSans-CondLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CB1AF01181AA5E3008E0D53 /* OpenSans-CondLight.ttf */; };
@@ -38,7 +41,6 @@
 		8CB1AF3F181AB955008E0D53 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB1AF3E181AB955008E0D53 /* CoreBluetooth.framework */; };
 		8CDD83FD181AF9D700088864 /* libNotifierCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB1AF1C181AB3B2008E0D53 /* libNotifierCore.a */; };
 		8CDD83FF181AFBFB00088864 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CDD83FE181AFBFB00088864 /* CFNetwork.framework */; };
-		8CDD8400181AFD0000088864 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB1AF3E181AB955008E0D53 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,7 @@
 		8C36FFFB17F4C6E4004860B5 /* BLENotifier-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BLENotifier-Prefix.pch"; sourceTree = "<group>"; };
 		8C36FFFC17F4C6E4004860B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8C36FFFD17F4C6E4004860B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8CAD2E61181ED28F007C5743 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8CB1AEFF181AA5E3008E0D53 /* Apache License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Apache License.txt"; sourceTree = "<group>"; };
 		8CB1AF00181AA5E3008E0D53 /* OpenSans-CondBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-CondBold.ttf"; sourceTree = "<group>"; };
 		8CB1AF01181AA5E3008E0D53 /* OpenSans-CondLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-CondLight.ttf"; sourceTree = "<group>"; };
@@ -136,7 +139,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CDD8400181AFD0000088864 /* CoreBluetooth.framework in Frameworks */,
+				8CAD2E64181ED2B9007C5743 /* CoreLocation.framework in Frameworks */,
+				8CAD2E63181ED2B2007C5743 /* CoreBluetooth.framework in Frameworks */,
 				8CDD83FD181AF9D700088864 /* libNotifierCore.a in Frameworks */,
 				8C36FFF017F4C6E4004860B5 /* CoreGraphics.framework in Frameworks */,
 				8C36FFF217F4C6E4004860B5 /* UIKit.framework in Frameworks */,
@@ -148,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CAD2E62181ED28F007C5743 /* CoreLocation.framework in Frameworks */,
 				8CDD83FF181AFBFB00088864 /* CFNetwork.framework in Frameworks */,
 				8CB1AF3F181AB955008E0D53 /* CoreBluetooth.framework in Frameworks */,
 				8CB1AF1D181AB3B2008E0D53 /* Foundation.framework in Frameworks */,
@@ -212,6 +217,7 @@
 		8C36FFEC17F4C6E4004860B5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8CAD2E61181ED28F007C5743 /* CoreLocation.framework */,
 				8CDD83FE181AFBFB00088864 /* CFNetwork.framework */,
 				8CB1AF3E181AB955008E0D53 /* CoreBluetooth.framework */,
 				8C36FFED17F4C6E4004860B5 /* Foundation.framework */,
