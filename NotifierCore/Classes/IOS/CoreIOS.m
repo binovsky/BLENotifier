@@ -7,10 +7,6 @@
 //
 
 #import "CoreIOS.h"
-//#import <CoreBluetooth/CoreBluetooth.h>
-//#import <CoreLocation/CoreLocation.h>
-//#import <Common/Common.h>
-#import <CoreBluetooth/CBPeripheralManager.h>
 
 @interface CoreIOS()
 {
