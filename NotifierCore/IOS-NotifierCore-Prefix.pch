@@ -5,8 +5,11 @@
 //
 
 #ifdef __OBJC__
-    #import <Foundation/Foundation.h>
+
     #import <CoreBluetooth/CoreBluetooth.h>
     #import <CoreLocation/CoreLocation.h>
     #import <Common/Common.h>
+    #import <CoreLocation/CoreLocation.h>
+    #import <CFNetwork/CFNetwork.h>
+
 #endif
