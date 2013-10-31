@@ -14,9 +14,9 @@
 
 #import "NotifierCore.h"
 
-#ifdef IOS
+#ifdef _IOS
     #import <IOS/CoreIOS.h>
-#elif OSX
+#elif _OSX
     #import <OSX/CoreOSX.h>
 #endif
 
@@ -43,9 +43,9 @@ static	NotifierCore	*_instance	=	nil;
 	{
 		if ( !_instance )
         {
-#ifdef IOS
+#ifdef _IOS
 			_instance = [[CoreIOS alloc] init];
-#elif OSX
+#elif _OSX
             _instance = [[CoreOSX alloc] init];
 #endif
         }

@@ -78,7 +78,7 @@
             [alert show];
             [alert release];
             
-            SAFE_RELEASE( _peripheralManager );
+//            SAFE_RELEASE( _peripheralManager );
         }
             break;
             
@@ -88,7 +88,7 @@
             [alert show];
             [alert release];
             
-            SAFE_RELEASE( _peripheralManager );
+//            SAFE_RELEASE( _peripheralManager );
         }
             break;
             
@@ -98,7 +98,7 @@
             [alert show];
             [alert release];
             
-            SAFE_RELEASE( _peripheralManager );
+//            SAFE_RELEASE( _peripheralManager );
         }
             break;
     }
