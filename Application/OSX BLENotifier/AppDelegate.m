@@ -16,7 +16,10 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
+    _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    [_statusItem setMenu:_statusMenu];
+    [_statusItem setTitle:@"Status"];
+    [_statusItem setHighlightMode:YES];
 }
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "M.B..OSX_BLENotifier" in the user's Application Support directory.

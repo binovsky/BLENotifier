@@ -8,11 +8,6 @@ extern NSString *const DEFAULT_ITALIC_FONT_NAME;
 
 extern UIFont* GET_DEFAULT_FONT(NSString* strFontName, int nSize);
 
-#define DEFAULT_FONT(fontSize)              GET_DEFAULT_FONT(DEFAULT_FONT_NAME,fontSize)
-#define DEFAULT_BOLD_FONT(fontSize)         GET_DEFAULT_FONT(DEFAULT_BOLD_FONT_NAME,fontSize)
-#define DEFAULT_SEMIBOLD_FONT(fontSize)     GET_DEFAULT_FONT(DEFAULT_SEMIBOLD_FONT_NAME,fontSize)
-#define DEFAULT_ITALIC_FONT(fontSize)       GET_DEFAULT_FONT(DEFAULT_ITALIC_FONT_NAME,fontSize)
-#define DEFAULT_LIGHT_FONT(fontSize)        GET_DEFAULT_FONT(DEFAULT_LIGHT_FONT_NAME,fontSize)
-#define DEFAULT_ICONS_FONT(fontSize)        GET_DEFAULT_FONT(DEFAULT_SPECIAL2_FONT_NAME,fontSize)
-
-#define SEARCHFIELD_FONT                    GET_DEFAULT_FONT(DEFAULT_FONT_NAME,13)
+#define FONT_REGULAR(fontSize)              GET_DEFAULT_FONT(DEFAULT_FONT_NAME,fontSize)
+#define FONT_BOLD(fontSize)                 GET_DEFAULT_FONT(DEFAULT_BOLD_FONT_NAME,fontSize)
+#define FONT_ITALIC(fontSize)               GET_DEFAULT_FONT(DEFAULT_ITALIC_FONT_NAME,fontSize)
