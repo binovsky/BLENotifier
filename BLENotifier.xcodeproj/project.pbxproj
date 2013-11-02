@@ -25,8 +25,8 @@
 		8CAE849C18227AAB006CD8AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36FFED17F4C6E4004860B5 /* Foundation.framework */; };
 		8CAE849D18227AAB006CD8AC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36FFF117F4C6E4004860B5 /* UIKit.framework */; };
 		8CAE84A018227AAB006CD8AC /* libIOSLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAE848D18227AAB006CD8AC /* libIOSLibrary.a */; };
-		8CAE851618227B8C006CD8AC /* ViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CAE84B218227B8B006CD8AC /* ViewController.h */; };
-		8CAE851718227B8C006CD8AC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CAE84B318227B8B006CD8AC /* ViewController.m */; };
+		8CAE851618227B8C006CD8AC /* RootController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CAE84B218227B8B006CD8AC /* RootController.h */; };
+		8CAE851718227B8C006CD8AC /* RootController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CAE84B318227B8B006CD8AC /* RootController.m */; };
 		8CAE852318227B8C006CD8AC /* AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CAE84B418227B8B006CD8AC /* AppDelegate.h */; };
 		8CAE852418227B8C006CD8AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CAE84B518227B8B006CD8AC /* AppDelegate.m */; };
 		8CAE853018227B8C006CD8AC /* BLENotifier-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CAE84B618227B8B006CD8AC /* BLENotifier-Info.plist */; };
@@ -204,8 +204,8 @@
 		8CAE847518227A91006CD8AC /* OSXLibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSXLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAE848D18227AAB006CD8AC /* libIOSLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIOSLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAE849A18227AAB006CD8AC /* IOSLibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOSLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8CAE84B218227B8B006CD8AC /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8CAE84B318227B8B006CD8AC /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8CAE84B218227B8B006CD8AC /* RootController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootController.h; sourceTree = "<group>"; };
+		8CAE84B318227B8B006CD8AC /* RootController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootController.m; sourceTree = "<group>"; };
 		8CAE84B418227B8B006CD8AC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8CAE84B518227B8B006CD8AC /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8CAE84B618227B8B006CD8AC /* BLENotifier-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BLENotifier-Info.plist"; sourceTree = "<group>"; };
@@ -507,8 +507,8 @@
 		8CAE84B118227B8B006CD8AC /* App */ = {
 			isa = PBXGroup;
 			children = (
-				8CAE84B218227B8B006CD8AC /* ViewController.h */,
-				8CAE84B318227B8B006CD8AC /* ViewController.m */,
+				8CAE84B218227B8B006CD8AC /* RootController.h */,
+				8CAE84B318227B8B006CD8AC /* RootController.m */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -749,7 +749,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CAE851618227B8C006CD8AC /* ViewController.h in Headers */,
+				8CAE851618227B8C006CD8AC /* RootController.h in Headers */,
 				8CAE871D18228352006CD8AC /* OSXLibrary.h in Headers */,
 				8CAE871C18228352006CD8AC /* OSXLibrary-Prefix.pch in Headers */,
 				8CAE852318227B8C006CD8AC /* AppDelegate.h in Headers */,
@@ -1128,7 +1128,7 @@
 				8CAE856718227B8C006CD8AC /* main.m in Sources */,
 				8CAE852418227B8C006CD8AC /* AppDelegate.m in Sources */,
 				8CAE853B18227B8C006CD8AC /* UILabel+Custom.m in Sources */,
-				8CAE851718227B8C006CD8AC /* ViewController.m in Sources */,
+				8CAE851718227B8C006CD8AC /* RootController.m in Sources */,
 				8CAE854918227B8C006CD8AC /* CommonFont.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2110,6 +2110,7 @@
 				8CAE848518227A91006CD8AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8CAE848618227A91006CD8AC /* Build configuration list for PBXNativeTarget "OSXLibraryTests" */ = {
 			isa = XCConfigurationList;
@@ -2118,6 +2119,7 @@
 				8CAE848818227A91006CD8AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8CAE84A918227AAC006CD8AC /* Build configuration list for PBXNativeTarget "IOSLibrary" */ = {
 			isa = XCConfigurationList;
@@ -2126,6 +2128,7 @@
 				8CAE84AB18227AAC006CD8AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8CAE84AC18227AAC006CD8AC /* Build configuration list for PBXNativeTarget "IOSLibraryTests" */ = {
 			isa = XCConfigurationList;
@@ -2134,6 +2137,7 @@
 				8CAE84AE18227AAC006CD8AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8CB1AF38181AB3B2008E0D53 /* Build configuration list for PBXNativeTarget "NotifierCore" */ = {
 			isa = XCConfigurationList;

@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "RootController.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
 
@@ -20,7 +20,7 @@
 	Swizzle([UILabel class], @selector(font), @selector(customFont));
     
     [self setWindow:[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]];
-    [[self window] setRootViewController:[[ViewController new] autorelease]];
+    [[self window] setRootViewController:[[RootController new] autorelease]];
     [[self window] makeKeyAndVisible];
     
     return YES;

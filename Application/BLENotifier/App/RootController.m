@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Michal Binovsky. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "RootController.h"
 
-@interface ViewController ()
+@interface RootController ()
 
 @end
 
