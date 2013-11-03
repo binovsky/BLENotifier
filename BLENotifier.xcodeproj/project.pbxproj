@@ -50,13 +50,6 @@
 		8CAE85E018227B8C006CD8AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CAE84DD18227B8C006CD8AC /* main.m */; };
 		8CAE85EB18227B8C006CD8AC /* OSX BLENotifier-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CAE84DE18227B8C006CD8AC /* OSX BLENotifier-Info.plist */; };
 		8CAE85F518227B8C006CD8AC /* OSX_BLENotifier.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8CAE84E018227B8C006CD8AC /* OSX_BLENotifier.xcdatamodeld */; };
-		8CAE860218227B8C006CD8AC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8CAE84E318227B8C006CD8AC /* InfoPlist.strings */; };
-		8CAE860418227B8C006CD8AC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8CAE84E318227B8C006CD8AC /* InfoPlist.strings */; };
-		8CAE860B18227B8C006CD8AC /* GetMetadataForFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CAE84E518227B8C006CD8AC /* GetMetadataForFile.m */; };
-		8CAE861618227B8C006CD8AC /* Importer Read Me.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8CAE84E618227B8C006CD8AC /* Importer Read Me.txt */; };
-		8CAE861F18227B8C006CD8AC /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 8CAE84E718227B8C006CD8AC /* main.c */; };
-		8CAE862C18227B8C006CD8AC /* MySpotlightImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CAE84E918227B8C006CD8AC /* MySpotlightImporter.m */; };
-		8CAE863718227B8C006CD8AC /* OSX BLENotifierImporter-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CAE84EA18227B8C006CD8AC /* OSX BLENotifierImporter-Info.plist */; };
 		8CAE864718227B8C006CD8AC /* OSX BLENotifierTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CAE84EF18227B8C006CD8AC /* OSX BLENotifierTests-Info.plist */; };
 		8CAE865018227B8C006CD8AC /* OSX_BLENotifierTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CAE84F018227B8C006CD8AC /* OSX_BLENotifierTests.m */; };
 		8CAE86F318228222006CD8AC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8CAE84ED18227B8C006CD8AC /* InfoPlist.strings */; };
@@ -89,11 +82,6 @@
 		8CF299C31821B29700428BA5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF299C21821B29700428BA5 /* Cocoa.framework */; };
 		8CF299E41821B29700428BA5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36000F17F4C6E4004860B5 /* XCTest.framework */; };
 		8CF299E51821B29700428BA5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF299C21821B29700428BA5 /* Cocoa.framework */; };
-		8CF299F71821B29700428BA5 /* OSX BLENotifierImporter.mdimporter in Resources */ = {isa = PBXBuildFile; fileRef = 8CF299F41821B29700428BA5 /* OSX BLENotifierImporter.mdimporter */; };
-		8CF299F91821B29700428BA5 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF299F81821B29700428BA5 /* CoreServices.framework */; };
-		8CF299FB1821B29700428BA5 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF299FA1821B29700428BA5 /* CoreFoundation.framework */; };
-		8CF299FD1821B29700428BA5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF299FC1821B29700428BA5 /* CoreData.framework */; };
-		8CF299FE1821B29700428BA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36FFED17F4C6E4004860B5 /* Foundation.framework */; };
 		8CF29A211821B36F00428BA5 /* IOBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF29A191821B32200428BA5 /* IOBluetooth.framework */; };
 		8CF29A221821B37C00428BA5 /* IOBluetoothUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF29A171821B31A00428BA5 /* IOBluetoothUI.framework */; };
 		8CF29A2A1821B53C00428BA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36FFED17F4C6E4004860B5 /* Foundation.framework */; };
@@ -145,13 +133,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 8CF299C01821B29700428BA5;
 			remoteInfo = "OSX BLENotifier";
-		};
-		8CF299F51821B29700428BA5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8C36FFE217F4C6E4004860B5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8CF299F31821B29700428BA5;
-			remoteInfo = "OSX BLENotifierImporter";
 		};
 		8CF29A311821B56900428BA5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -238,14 +219,6 @@
 		8CAE84DE18227B8C006CD8AC /* OSX BLENotifier-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "OSX BLENotifier-Info.plist"; sourceTree = "<group>"; };
 		8CAE84DF18227B8C006CD8AC /* OSX BLENotifier-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OSX BLENotifier-Prefix.pch"; sourceTree = "<group>"; };
 		8CAE84E118227B8C006CD8AC /* OSX_BLENotifier.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OSX_BLENotifier.xcdatamodel; sourceTree = "<group>"; };
-		8CAE84E418227B8C006CD8AC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8CAE84E518227B8C006CD8AC /* GetMetadataForFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetMetadataForFile.m; sourceTree = "<group>"; };
-		8CAE84E618227B8C006CD8AC /* Importer Read Me.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Importer Read Me.txt"; sourceTree = "<group>"; };
-		8CAE84E718227B8C006CD8AC /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		8CAE84E818227B8C006CD8AC /* MySpotlightImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySpotlightImporter.h; sourceTree = "<group>"; };
-		8CAE84E918227B8C006CD8AC /* MySpotlightImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySpotlightImporter.m; sourceTree = "<group>"; };
-		8CAE84EA18227B8C006CD8AC /* OSX BLENotifierImporter-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "OSX BLENotifierImporter-Info.plist"; sourceTree = "<group>"; };
-		8CAE84EB18227B8C006CD8AC /* OSX BLENotifierImporter-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OSX BLENotifierImporter-Prefix.pch"; sourceTree = "<group>"; };
 		8CAE84EE18227B8C006CD8AC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8CAE84EF18227B8C006CD8AC /* OSX BLENotifierTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "OSX BLENotifierTests-Info.plist"; sourceTree = "<group>"; };
 		8CAE84F018227B8C006CD8AC /* OSX_BLENotifierTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSX_BLENotifierTests.m; sourceTree = "<group>"; };
@@ -282,7 +255,6 @@
 		8CF299C61821B29700428BA5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		8CF299C71821B29700428BA5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8CF299E31821B29700428BA5 /* OSX BLENotifierTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OSX BLENotifierTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8CF299F41821B29700428BA5 /* OSX BLENotifierImporter.mdimporter */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OSX BLENotifierImporter.mdimporter"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CF299F81821B29700428BA5 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = Library/Frameworks/CoreServices.framework; sourceTree = DEVELOPER_DIR; };
 		8CF299FA1821B29700428BA5 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		8CF299FC1821B29700428BA5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
@@ -396,17 +368,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8CF299F11821B29700428BA5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8CF299FB1821B29700428BA5 /* CoreFoundation.framework in Frameworks */,
-				8CF299FD1821B29700428BA5 /* CoreData.framework in Frameworks */,
-				8CF299F91821B29700428BA5 /* CoreServices.framework in Frameworks */,
-				8CF299FE1821B29700428BA5 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8CF29A261821B53C00428BA5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -442,7 +403,6 @@
 				8CB1AF29181AB3B2008E0D53 /* NotifierCoreTests.xctest */,
 				8CF299C11821B29700428BA5 /* OSX BLENotifier.app */,
 				8CF299E31821B29700428BA5 /* OSX BLENotifierTests.xctest */,
-				8CF299F41821B29700428BA5 /* OSX BLENotifierImporter.mdimporter */,
 				8CF29A301821B53C00428BA5 /* libOSX NotifierCore.a */,
 				8CAE846918227A91006CD8AC /* libOSXLibrary.a */,
 				8CAE847518227A91006CD8AC /* OSXLibraryTests.xctest */,
@@ -481,7 +441,6 @@
 				8CAE84B018227B8B006CD8AC /* BLENotifier */,
 				8CAE84CE18227B8B006CD8AC /* BLENotifierTests */,
 				8CAE84D318227B8B006CD8AC /* OSX BLENotifier */,
-				8CAE84E218227B8C006CD8AC /* OSX BLENotifierImporter */,
 				8CAE84EC18227B8C006CD8AC /* OSX BLENotifierTests */,
 			);
 			path = Application;
@@ -596,21 +555,6 @@
 				8CAE84E018227B8C006CD8AC /* OSX_BLENotifier.xcdatamodeld */,
 			);
 			path = "OSX BLENotifier";
-			sourceTree = "<group>";
-		};
-		8CAE84E218227B8C006CD8AC /* OSX BLENotifierImporter */ = {
-			isa = PBXGroup;
-			children = (
-				8CAE84E318227B8C006CD8AC /* InfoPlist.strings */,
-				8CAE84E518227B8C006CD8AC /* GetMetadataForFile.m */,
-				8CAE84E618227B8C006CD8AC /* Importer Read Me.txt */,
-				8CAE84E718227B8C006CD8AC /* main.c */,
-				8CAE84E818227B8C006CD8AC /* MySpotlightImporter.h */,
-				8CAE84E918227B8C006CD8AC /* MySpotlightImporter.m */,
-				8CAE84EA18227B8C006CD8AC /* OSX BLENotifierImporter-Info.plist */,
-				8CAE84EB18227B8C006CD8AC /* OSX BLENotifierImporter-Prefix.pch */,
-			);
-			path = "OSX BLENotifierImporter";
 			sourceTree = "<group>";
 		};
 		8CAE84EC18227B8C006CD8AC /* OSX BLENotifierTests */ = {
@@ -912,7 +856,6 @@
 			);
 			dependencies = (
 				8CF29A321821B56900428BA5 /* PBXTargetDependency */,
-				8CF299F61821B29700428BA5 /* PBXTargetDependency */,
 			);
 			name = "OSX BLENotifier";
 			productName = "OSX BLENotifier";
@@ -936,23 +879,6 @@
 			productName = "OSX BLENotifierTests";
 			productReference = 8CF299E31821B29700428BA5 /* OSX BLENotifierTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		8CF299F31821B29700428BA5 /* OSX BLENotifierImporter */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8CF29A141821B29800428BA5 /* Build configuration list for PBXNativeTarget "OSX BLENotifierImporter" */;
-			buildPhases = (
-				8CF299F01821B29700428BA5 /* Sources */,
-				8CF299F11821B29700428BA5 /* Frameworks */,
-				8CF299F21821B29700428BA5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "OSX BLENotifierImporter";
-			productName = "OSX BLENotifierImporter";
-			productReference = 8CF299F41821B29700428BA5 /* OSX BLENotifierImporter.mdimporter */;
-			productType = "com.apple.product-type.bundle";
 		};
 		8CF29A231821B53C00428BA5 /* OSX NotifierCore */ = {
 			isa = PBXNativeTarget;
@@ -1016,7 +942,6 @@
 				8CB1AF28181AB3B2008E0D53 /* NotifierCoreTests */,
 				8CF299C01821B29700428BA5 /* OSX BLENotifier */,
 				8CF299E21821B29700428BA5 /* OSX BLENotifierTests */,
-				8CF299F31821B29700428BA5 /* OSX BLENotifierImporter */,
 				8CF29A231821B53C00428BA5 /* OSX NotifierCore */,
 				8CAE846818227A91006CD8AC /* OSXLibrary */,
 				8CAE847418227A91006CD8AC /* OSXLibraryTests */,
@@ -1064,7 +989,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CAE871518228344006CD8AC /* InfoPlist.strings in Resources */,
-				8CAE860418227B8C006CD8AC /* InfoPlist.strings in Resources */,
 				8CAE871618228344006CD8AC /* IOSLibraryTests-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1087,7 +1011,6 @@
 				8CAE85BF18227B8C006CD8AC /* MainMenu.xib in Resources */,
 				8CAE85C718227B8C006CD8AC /* Credits.rtf in Resources */,
 				8CAE85D718227B8C006CD8AC /* Images.xcassets in Resources */,
-				8CF299F71821B29700428BA5 /* OSX BLENotifierImporter.mdimporter in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1097,16 +1020,6 @@
 			files = (
 				8CAE864718227B8C006CD8AC /* OSX BLENotifierTests-Info.plist in Resources */,
 				8CAE86F318228222006CD8AC /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8CF299F21821B29700428BA5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8CAE863718227B8C006CD8AC /* OSX BLENotifierImporter-Info.plist in Resources */,
-				8CAE861618227B8C006CD8AC /* Importer Read Me.txt in Resources */,
-				8CAE860218227B8C006CD8AC /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1200,16 +1113,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8CF299F01821B29700428BA5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8CAE862C18227B8C006CD8AC /* MySpotlightImporter.m in Sources */,
-				8CAE861F18227B8C006CD8AC /* main.c in Sources */,
-				8CAE860B18227B8C006CD8AC /* GetMetadataForFile.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8CF29A241821B53C00428BA5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1251,11 +1154,6 @@
 			isa = PBXTargetDependency;
 			target = 8CF299C01821B29700428BA5 /* OSX BLENotifier */;
 			targetProxy = 8CF299E61821B29700428BA5 /* PBXContainerItemProxy */;
-		};
-		8CF299F61821B29700428BA5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8CF299F31821B29700428BA5 /* OSX BLENotifierImporter */;
-			targetProxy = 8CF299F51821B29700428BA5 /* PBXContainerItemProxy */;
 		};
 		8CF29A321821B56900428BA5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1301,14 +1199,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				8CAE84DB18227B8C006CD8AC /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		8CAE84E318227B8C006CD8AC /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8CAE84E418227B8C006CD8AC /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1447,6 +1337,7 @@
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1560,6 +1451,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -1845,6 +1737,7 @@
 		8CF29A0E1821B29800428BA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1869,9 +1762,10 @@
 					"$(SRCROOT)/Core/NotifierCore",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Application/OSX BLENotifier/OSX BLENotifier-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1879,6 +1773,7 @@
 		8CF29A0F1821B29800428BA5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1899,7 +1794,7 @@
 					"$(SRCROOT)/Core/NotifierCore",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Application/OSX BLENotifier/OSX BLENotifier-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
@@ -1926,7 +1821,7 @@
 					_OSX,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/OSX BLENotifierTests/OSX BLENotifierTests-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -1950,67 +1845,11 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Application/OSX BLENotifier/OSX BLENotifier-Prefix.pch";
 				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = _OSX;
 				INFOPLIST_FILE = "$(SRCROOT)/OSX BLENotifierTests/OSX BLENotifierTests-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
-		8CF29A121821B29800428BA5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/Application/OSX BLENotifierImporter/OSX BLENotifierImporter-Prefix.pch";
-				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = (
-					"DEBUG=1",
-					"$(inherited)",
-					_DEBUG,
-					_OSX,
-				);
-				INFOPLIST_FILE = "$(SRCROOT)/Application/OSX BLENotifierImporter/OSX BLENotifierImporter-Info.plist";
-				INSTALL_PATH = "@executable_path/../Contents/Library/Spotlight";
-				LIBRARY_STYLE = BUNDLE;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = mdimporter;
-			};
-			name = Debug;
-		};
-		8CF29A131821B29800428BA5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/Application/OSX BLENotifierImporter/OSX BLENotifierImporter-Prefix.pch";
-				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = " _OSX";
-				INFOPLIST_FILE = "$(SRCROOT)/Application/OSX BLENotifierImporter/OSX BLENotifierImporter-Info.plist";
-				INSTALL_PATH = "@executable_path/../Contents/Library/Spotlight";
-				LIBRARY_STYLE = BUNDLE;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = mdimporter;
 			};
 			name = Release;
 		};
@@ -2038,6 +1877,7 @@
 					"$(SRCROOT)/Core/NotifierCore/Classes",
 					"$(SRCROOT)/Core/NotifierCore/Classes/OSX",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "OSX NotifierCore";
 				SDKROOT = macosx;
@@ -2065,6 +1905,7 @@
 					"$(SRCROOT)/Core/NotifierCore/Classes",
 					"$(SRCROOT)/Core/NotifierCore/Classes/OSX",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "OSX NotifierCore";
 				SDKROOT = macosx;
@@ -2153,15 +1994,6 @@
 			buildConfigurations = (
 				8CB1AF3C181AB3B2008E0D53 /* Debug */,
 				8CB1AF3D181AB3B2008E0D53 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8CF29A141821B29800428BA5 /* Build configuration list for PBXNativeTarget "OSX BLENotifierImporter" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8CF29A121821B29800428BA5 /* Debug */,
-				8CF29A131821B29800428BA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

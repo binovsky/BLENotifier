@@ -12,7 +12,7 @@
 
 @end
 
-@implementation ViewController
+@implementation RootController
 
 - (void)dealloc
 {
