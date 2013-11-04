@@ -13,6 +13,10 @@
 		8C36FFEE17F4C6E4004860B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36FFED17F4C6E4004860B5 /* Foundation.framework */; };
 		8C36FFF017F4C6E4004860B5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36FFEF17F4C6E4004860B5 /* CoreGraphics.framework */; };
 		8C36FFF217F4C6E4004860B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36FFF117F4C6E4004860B5 /* UIKit.framework */; };
+		8C852AE018280601008F041C /* Library.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C852ADF18280601008F041C /* Library.h */; };
+		8C852AE3182818C7008F041C /* UIAlertView+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C852AE1182818C7008F041C /* UIAlertView+Extensions.h */; };
+		8C852AE4182818C7008F041C /* UIAlertView+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C852AE2182818C7008F041C /* UIAlertView+Extensions.m */; };
+		8C852AE5182818C7008F041C /* UIAlertView+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C852AE2182818C7008F041C /* UIAlertView+Extensions.m */; };
 		8CAD2E62181ED28F007C5743 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAD2E61181ED28F007C5743 /* CoreLocation.framework */; };
 		8CAD2E63181ED2B2007C5743 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB1AF3E181AB955008E0D53 /* CoreBluetooth.framework */; };
 		8CAD2E64181ED2B9007C5743 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAD2E61181ED28F007C5743 /* CoreLocation.framework */; };
@@ -63,7 +67,6 @@
 		8CAE871618228344006CD8AC /* IOSLibraryTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CAE871318228344006CD8AC /* IOSLibraryTests-Info.plist */; };
 		8CAE871718228344006CD8AC /* IOSLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CAE871418228344006CD8AC /* IOSLibraryTests.m */; };
 		8CAE871C18228352006CD8AC /* OSXLibrary-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 8CAE871918228352006CD8AC /* OSXLibrary-Prefix.pch */; };
-		8CAE871D18228352006CD8AC /* OSXLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CAE871A18228352006CD8AC /* OSXLibrary.h */; };
 		8CAE871E18228352006CD8AC /* OSXLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CAE871B18228352006CD8AC /* OSXLibrary.m */; };
 		8CAE87241822835F006CD8AC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8CAE87201822835F006CD8AC /* InfoPlist.strings */; };
 		8CAE87251822835F006CD8AC /* OSXLibraryTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CAE87221822835F006CD8AC /* OSXLibraryTests-Info.plist */; };
@@ -180,6 +183,9 @@
 		8C36FFED17F4C6E4004860B5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8C36FFEF17F4C6E4004860B5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		8C36FFF117F4C6E4004860B5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8C852ADF18280601008F041C /* Library.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Library.h; sourceTree = "<group>"; };
+		8C852AE1182818C7008F041C /* UIAlertView+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Extensions.h"; sourceTree = "<group>"; };
+		8C852AE2182818C7008F041C /* UIAlertView+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Extensions.m"; sourceTree = "<group>"; };
 		8CAD2E61181ED28F007C5743 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8CAE846918227A91006CD8AC /* libOSXLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOSXLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAE847518227A91006CD8AC /* OSXLibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSXLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -234,13 +240,11 @@
 		8CAE870618228328006CD8AC /* NotifierCoreTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "NotifierCoreTests-Info.plist"; sourceTree = "<group>"; };
 		8CAE870718228328006CD8AC /* NotifierCoreTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifierCoreTests.m; sourceTree = "<group>"; };
 		8CAE870C18228339006CD8AC /* IOSLibrary-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IOSLibrary-Prefix.pch"; sourceTree = "<group>"; };
-		8CAE870D18228339006CD8AC /* IOSLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOSLibrary.h; sourceTree = "<group>"; };
 		8CAE870E18228339006CD8AC /* IOSLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IOSLibrary.m; sourceTree = "<group>"; };
 		8CAE871218228344006CD8AC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8CAE871318228344006CD8AC /* IOSLibraryTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "IOSLibraryTests-Info.plist"; sourceTree = "<group>"; };
 		8CAE871418228344006CD8AC /* IOSLibraryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IOSLibraryTests.m; sourceTree = "<group>"; };
 		8CAE871918228352006CD8AC /* OSXLibrary-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OSXLibrary-Prefix.pch"; sourceTree = "<group>"; };
-		8CAE871A18228352006CD8AC /* OSXLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSXLibrary.h; sourceTree = "<group>"; };
 		8CAE871B18228352006CD8AC /* OSXLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSXLibrary.m; sourceTree = "<group>"; };
 		8CAE87211822835F006CD8AC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8CAE87221822835F006CD8AC /* OSXLibraryTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "OSXLibraryTests-Info.plist"; sourceTree = "<group>"; };
@@ -488,6 +492,8 @@
 				8CAE84BA18227B8B006CD8AC /* Categories.h */,
 				8CAE84BB18227B8B006CD8AC /* UILabel+Custom.h */,
 				8CAE84BC18227B8B006CD8AC /* UILabel+Custom.m */,
+				8C852AE1182818C7008F041C /* UIAlertView+Extensions.h */,
+				8C852AE2182818C7008F041C /* UIAlertView+Extensions.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -579,6 +585,7 @@
 		8CAE850418227B8C006CD8AC /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				8C852ADF18280601008F041C /* Library.h */,
 				8CAE870B18228339006CD8AC /* IOSLibrary */,
 				8CAE871018228344006CD8AC /* IOSLibraryTests */,
 				8CAE871818228352006CD8AC /* OSXLibrary */,
@@ -591,9 +598,9 @@
 			isa = PBXGroup;
 			children = (
 				8CAE86F5182282FF006CD8AC /* Classes */,
-				8CAE86FC182282FF006CD8AC /* IOS-NotifierCore-Prefix.pch */,
 				8CAE86FD182282FF006CD8AC /* NotifierCore.h */,
 				8CAE86FE182282FF006CD8AC /* NotifierCore.m */,
+				8CAE86FC182282FF006CD8AC /* IOS-NotifierCore-Prefix.pch */,
 				8CAE86FF182282FF006CD8AC /* OSX-NotifierCore-Prefix.pch */,
 			);
 			path = NotifierCore;
@@ -640,7 +647,6 @@
 			isa = PBXGroup;
 			children = (
 				8CAE870C18228339006CD8AC /* IOSLibrary-Prefix.pch */,
-				8CAE870D18228339006CD8AC /* IOSLibrary.h */,
 				8CAE870E18228339006CD8AC /* IOSLibrary.m */,
 			);
 			path = IOSLibrary;
@@ -660,7 +666,6 @@
 			isa = PBXGroup;
 			children = (
 				8CAE871918228352006CD8AC /* OSXLibrary-Prefix.pch */,
-				8CAE871A18228352006CD8AC /* OSXLibrary.h */,
 				8CAE871B18228352006CD8AC /* OSXLibrary.m */,
 			);
 			path = OSXLibrary;
@@ -694,8 +699,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CAE851618227B8C006CD8AC /* RootController.h in Headers */,
-				8CAE871D18228352006CD8AC /* OSXLibrary.h in Headers */,
 				8CAE871C18228352006CD8AC /* OSXLibrary-Prefix.pch in Headers */,
+				8C852AE3182818C7008F041C /* UIAlertView+Extensions.h in Headers */,
+				8C852AE018280601008F041C /* Library.h in Headers */,
 				8CAE852318227B8C006CD8AC /* AppDelegate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1043,6 +1049,7 @@
 				8CAE853B18227B8C006CD8AC /* UILabel+Custom.m in Sources */,
 				8CAE851718227B8C006CD8AC /* RootController.m in Sources */,
 				8CAE854918227B8C006CD8AC /* CommonFont.m in Sources */,
+				8C852AE4182818C7008F041C /* UIAlertView+Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1051,6 +1058,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CAE871E18228352006CD8AC /* OSXLibrary.m in Sources */,
+				8C852AE5182818C7008F041C /* UIAlertView+Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1287,6 +1295,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)",
 					"$(SRCROOT)/Library",
 					"$(SRCROOT)/Core",
 					"$(SRCROOT)/Application",
@@ -1331,6 +1340,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)",
 					"$(SRCROOT)/Library",
 					"$(SRCROOT)/Core",
 					"$(SRCROOT)/Application",

@@ -30,6 +30,7 @@
     [super viewDidLoad];
     
     NotifierCore *core = [NotifierCore instance];
+    [core initBeacon];
     [core startPeripheralRoleSession];
 }
 

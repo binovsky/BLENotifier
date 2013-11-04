@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Michal Binovsky. All rights reserved.
 //
 
-#import "OSXLibrary.h"
+#import <Library/Library.h>
 
-@implementation OSXLibrary
+@implementation Library
 
 @end

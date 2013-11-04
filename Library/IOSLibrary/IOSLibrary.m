@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Michal Binovsky. All rights reserved.
 //
 
-#import "IOSLibrary.h"
+#import <Library/Library.h>
 
-@implementation IOSLibrary
+@implementation Library
 
 @end

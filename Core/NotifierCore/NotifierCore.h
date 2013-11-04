@@ -23,6 +23,7 @@ extern NSString*  SERVICE_UUID;
     + ( NotifierCore * )instance;
 
     #pragma mark - Instanance Methods
+    - (void)initBeacon;
     - (void)startPeripheralRoleSession;
     - (void)stopPeripheralRoleSession;
 
