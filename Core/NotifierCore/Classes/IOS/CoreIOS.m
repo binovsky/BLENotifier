@@ -20,6 +20,7 @@ const static NSString*  BEACON_IDENTIFIER       = @"com.binovsky.BLENotifier";
     CBUUID *_serviceUUID;
     CBMutableCharacteristic *_characteristics;
     CBMutableService *_service;
+    CLLocationManager *_locationManager;
 }
 
 @end
@@ -47,6 +48,7 @@ const static NSString*  BEACON_IDENTIFIER       = @"com.binovsky.BLENotifier";
     SAFE_RELEASE( _serviceUUID );
     SAFE_RELEASE( _characteristics );
     SAFE_RELEASE( _service );
+    SAFE_RELEASE( _locationManager );
     
     [super dealloc];
 }
@@ -57,11 +59,18 @@ const static NSString*  BEACON_IDENTIFIER       = @"com.binovsky.BLENotifier";
     _ASSERT( !_proximityUUID );
     _ASSERT( !_beaconRegion );
     _ASSERT( !_characteristics );
+    _ASSERT( !_locationManager );
     
+    // COMMON
     _serviceUUID = [CBUUID UUIDWithString:(NSString *)SERVICE_UUID];
     _proximityUUID = [[NSUUID alloc] initWithUUIDString:(NSString *)SERVICE_UUID];
     _beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:_proximityUUID major:1 minor:1 identifier:(NSString *)BEACON_IDENTIFIER];
+    
+    // PERIPHERAL
     _characteristics = [[CBMutableCharacteristic alloc] initWithType:_serviceUUID properties:CBCharacteristicPropertyNotify value:nil permissions:CBAttributePermissionsReadable];
+    
+    // CENTRAL
+    _locationManager = [[CLLocationManager alloc] init];
     
     _bInitialized = YES;
 }
@@ -75,6 +84,8 @@ const static NSString*  BEACON_IDENTIFIER       = @"com.binovsky.BLENotifier";
     _ASSERT( _proximityUUID );
     _ASSERT( _beaconRegion );
     _ASSERT( _characteristics );
+    
+    
     _ASSERT( !_peripheralManager );
     _peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil options:nil];
 }
@@ -83,6 +94,18 @@ const static NSString*  BEACON_IDENTIFIER       = @"com.binovsky.BLENotifier";
 {
     [_peripheralManager stopAdvertising];
     [_peripheralManager removeAllServices];
+}
+
+- (void)startCentralRoleSession
+{
+    if ( !_bInitialized )
+        [NSException raise:@"Initialization failed" format:@"Probably you have forget to call 'initBeacon' before '%@'", NSStringFromSelector( _cmd )];
+    
+    _ASSERT( _proximityUUID );
+    _ASSERT( _beaconRegion );
+    _ASSERT( _locationManager );
+    [_locationManager setDelegate:self];
+    [_locationManager startMonitoringForRegion:_beaconRegion];
 }
 
 #pragma mark - CBPeripheralManagerDelegate
@@ -138,7 +161,6 @@ const static NSString*  BEACON_IDENTIFIER       = @"com.binovsky.BLENotifier";
     [_peripheralManager startAdvertising:@{ CBAdvertisementDataServiceUUIDsKey : @[_service.UUID] }];
 }
 
-
 - (void)peripheralManagerDidStartAdvertising:(CBPeripheralManager *)peripheral error:(NSError *)error
 {
     _ASSERT( [_peripheralManager isEqual:peripheral] );
@@ -148,6 +170,83 @@ const static NSString*  BEACON_IDENTIFIER       = @"com.binovsky.BLENotifier";
         DLog(@"Error advertising: %@", [error localizedDescription]);
         [_peripheralManager stopAdvertising];
     }   
+}
+
+#pragma mark - CLLocationManagerDelegate
+- (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region
+{
+    _ASSERT( [manager isEqual:_locationManager] );
+    
+    [_locationManager startRangingBeaconsInRegion:_beaconRegion];
+    DLog( @"Beacon found: YES" );
+}
+
+-(void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region
+{
+    _ASSERT( [manager isEqual:_locationManager] );
+    
+    [_locationManager stopRangingBeaconsInRegion:_beaconRegion];
+    DLog( @"Beacon found: NO" );
+}
+
+-(void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
+{
+    _ASSERT( [manager isEqual:_locationManager] );
+    
+    CLBeacon *beacon = nil;
+    beacon = [beacons lastObject];
+    
+    [self logBeacon:beacon];
+}
+
+- (void)logBeacon:(CLBeacon *)beacon
+{
+    _ASSERT( beacon );
+    
+    NSString *log = @"\n\n\nBEACON: \n\n";
+    log = [log stringByAppendingString:@"UUID: "];
+    log = [log stringByAppendingString:beacon.proximityUUID.UUIDString];
+    log = [log stringByAppendingString:@"\n"];
+    log = [log stringByAppendingString:@"BEACON MAJOR: "];
+    log = [log stringByAppendingString:[NSString stringWithFormat:@"%@", beacon.major]];
+    log = [log stringByAppendingString:@"\n"];
+    log = [log stringByAppendingString:@"BEACON MINOR: "];
+    log = [log stringByAppendingString:[NSString stringWithFormat:@"%@", beacon.minor]];
+    log = [log stringByAppendingString:@"\n"];
+    log = [log stringByAppendingString:@"ACCURACY: "];
+    log = [log stringByAppendingString:[NSString stringWithFormat:@"%f", beacon.accuracy]];
+    log = [log stringByAppendingString:@"\n"];
+    
+    NSString *strProximity;
+    if ( beacon.proximity == CLProximityUnknown )
+    {
+        strProximity = @"Unknown Proximity";
+    }
+    else if ( beacon.proximity == CLProximityImmediate )
+    {
+        strProximity = @"Immediate";
+    }
+    else if ( beacon.proximity == CLProximityNear )
+    {
+        strProximity = @"Near";
+    }
+    else if ( beacon.proximity == CLProximityFar )
+    {
+        strProximity = @"Far";
+    }
+    else
+    {
+        strProximity = @"UIDENTIFIED STATE";
+    }
+    
+    log = [log stringByAppendingString:@"PROXIMITY: "];
+    log = [log stringByAppendingString:strProximity];
+    log = [log stringByAppendingString:@"\n"];
+    log = [log stringByAppendingString:@"RSSI: "];
+    log = [log stringByAppendingString:[NSString stringWithFormat:@"%li", (long)beacon.rssi]];
+    log = [log stringByAppendingString:@"\n"];
+    
+    DLog( @"%@", log );
 }
 
 @end

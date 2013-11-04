@@ -9,6 +9,6 @@
 #import <NotifierCore/NotifierCore.h>
 @protocol CBPeripheralManagerDelegate;
 
-@interface CoreIOS : NotifierCore < CBPeripheralManagerDelegate >
+@interface CoreIOS : NotifierCore < CBPeripheralManagerDelegate, CLLocationManagerDelegate >
 
 @end
