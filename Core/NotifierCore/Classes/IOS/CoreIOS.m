@@ -108,6 +108,12 @@ const static NSString*  BEACON_IDENTIFIER       = @"com.binovsky.BLENotifier";
     [_locationManager startMonitoringForRegion:_beaconRegion];
 }
 
+- (void)stopCentralRoleSession
+{
+    [_locationManager stopMonitoringForRegion:_beaconRegion];
+    [_locationManager setDelegate:nil];
+}
+
 #pragma mark - CBPeripheralManagerDelegate
 - (void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral
 {

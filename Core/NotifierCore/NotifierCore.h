@@ -26,5 +26,7 @@ extern NSString*  SERVICE_UUID;
     - (void)initBeacon;
     - (void)startPeripheralRoleSession;
     - (void)stopPeripheralRoleSession;
+    - (void)startCentralRoleSession;
+    - (void)stopCentralRoleSession;
 
 @end
