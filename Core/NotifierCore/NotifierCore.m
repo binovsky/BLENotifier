@@ -23,6 +23,10 @@
 
 const NSString*  SERVICE_UUID    = @"BDFDA27E-2B3E-4FAF-A68C-EF04DC79594D";
 
+// NOTIFICATIONS
+const NSString* DidStartAdvertisingNotification = @"DidStartAdvertisingNotification";
+const NSString* DidStopAdvertisingNotification = @"DidStopAdvertisingNotification";
+
 #pragma mark - private @interface NotifierCore
 @interface NotifierCore()
 {

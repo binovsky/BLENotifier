@@ -44,11 +44,11 @@ const static NSString*  BEACON_IDENTIFIER       = @"com.binovsky.BLENotifier";
     SAFE_RELEASE( _beaconRegion );
     SAFE_RELEASE( _beaconPeripheralData );
     SAFE_RELEASE( _proximityUUID );
-    [_peripheralManager setDelegate:nil]; SAFE_RELEASE( _peripheralManager );
     SAFE_RELEASE( _serviceUUID );
     SAFE_RELEASE( _characteristics );
     SAFE_RELEASE( _service );
     SAFE_RELEASE( _locationManager );
+    [_peripheralManager setDelegate:nil]; SAFE_RELEASE( _peripheralManager );
     
     [super dealloc];
 }
@@ -60,6 +60,7 @@ const static NSString*  BEACON_IDENTIFIER       = @"com.binovsky.BLENotifier";
     _ASSERT( !_beaconRegion );
     _ASSERT( !_characteristics );
     _ASSERT( !_locationManager );
+    _ASSERT( !_service );
     
     // COMMON
     _serviceUUID = [CBUUID UUIDWithString:(NSString *)SERVICE_UUID];
@@ -68,6 +69,8 @@ const static NSString*  BEACON_IDENTIFIER       = @"com.binovsky.BLENotifier";
     
     // PERIPHERAL
     _characteristics = [[CBMutableCharacteristic alloc] initWithType:_serviceUUID properties:CBCharacteristicPropertyNotify value:nil permissions:CBAttributePermissionsReadable];
+    _service = [[CBMutableService alloc] initWithType:_serviceUUID primary:YES];
+    [_service setCharacteristics:@[_characteristics]];
     
     // CENTRAL
     _locationManager = [[CLLocationManager alloc] init];
@@ -94,6 +97,8 @@ const static NSString*  BEACON_IDENTIFIER       = @"com.binovsky.BLENotifier";
 {
     [_peripheralManager stopAdvertising];
     [_peripheralManager removeAllServices];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:DidStopAdvertisingNotification object:nil];
 }
 
 - (void)startCentralRoleSession
@@ -114,6 +119,11 @@ const static NSString*  BEACON_IDENTIFIER       = @"com.binovsky.BLENotifier";
     [_locationManager setDelegate:nil];
 }
 
+- (BOOL)isAdvertising
+{
+    return ( _peripheralManager && [_peripheralManager isAdvertising] );
+}
+
 #pragma mark - CBPeripheralManagerDelegate
 - (void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral
 {
@@ -123,10 +133,8 @@ const static NSString*  BEACON_IDENTIFIER       = @"com.binovsky.BLENotifier";
     {
         case CBPeripheralManagerStatePoweredOn:
         {
-            _service = [[CBMutableService alloc] initWithType:_serviceUUID primary:YES];
-            [_service setCharacteristics:@[_characteristics]];
-            
             [_peripheralManager addService:_service];
+            [[NSNotificationCenter defaultCenter] postNotificationName:DidStartAdvertisingNotification object:nil];
         }
             break;
             
@@ -147,7 +155,6 @@ const static NSString*  BEACON_IDENTIFIER       = @"com.binovsky.BLENotifier";
         default:
         {
             [UIAlertView showSimpleAlertWithTitle:@"Error" message:@"Your device is unsupported or unknow error occured" andCancelButtonTitle:@"Ok"];
-            [self stopPeripheralRoleSession];
         }
             break;
     }

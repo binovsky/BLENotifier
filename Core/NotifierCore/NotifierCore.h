@@ -14,6 +14,10 @@
 
 extern NSString*  SERVICE_UUID;
 
+// NOTIFICATIONS
+extern NSString* DidStartAdvertisingNotification;
+extern NSString* DidStopAdvertisingNotification;
+
 #pragma mark - @interface NotifierCore
 @interface NotifierCore : NSObject
 {
@@ -28,5 +32,6 @@ extern NSString*  SERVICE_UUID;
     - (void)stopPeripheralRoleSession;
     - (void)startCentralRoleSession;
     - (void)stopCentralRoleSession;
+    - (BOOL)isAdvertising;
 
 @end

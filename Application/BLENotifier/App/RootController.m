@@ -21,17 +21,19 @@
 
 - (void)dealloc
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
     SAFE_RELEASE( _core );
     SAFE_RELEASE( _beaconButton );
     SAFE_RELEASE( _listenerButton );
     [super dealloc];
 }
 
-//- (void)loadView
-//{
-//    [self setView:[[UIView new] autorelease]];
-//    [[self view] setBackgroundColor:[UIColor whiteColor]];
-//}
+- (void)loadView
+{
+    [self setView:[[UIView new] autorelease]];
+    [[self view] setBackgroundColor:[UIColor whiteColor]];
+}
 
 - (void)viewDidLoad
 {
@@ -41,13 +43,17 @@
     _core = [NotifierCore instance];
     [_core initBeacon];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didStartAdvertising:) name:DidStartAdvertisingNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didStartAdvertising:) name:DidStopAdvertisingNotification object:nil];
+    
     _ASSERT( !_beaconButton );
-    _beaconButton = [UIButton new];
+    _beaconButton = [[UIButton buttonWithType:UIButtonTypeSystem] retain];
     [_beaconButton setTranslatesAutoresizingMaskIntoConstraints:NO];
-//    [_beaconButton setTintColor:[UIColor orangeColor]];
-    [[_beaconButton titleLabel] setTextColor:[UIColor orangeColor]];
+    [_beaconButton setTintColor:[UIColor orangeColor]];
     [_beaconButton addTarget:self action:@selector( startBeaconRole: ) forControlEvents:UIControlEventTouchUpInside];
     [_beaconButton setTitle:@"Start Beacon" forState:UIControlStateNormal];
+    [_beaconButton setTitleColor:[UIColor cyanColor] forState:UIControlStateHighlighted];
+    [[_beaconButton titleLabel] setFont:[UIFont systemFontOfSize:50.f]];
     [[self view] addSubview:_beaconButton];
     
     [[self view] addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_beaconButton]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings( _beaconButton )]];
@@ -55,12 +61,13 @@
     [[self view] addConstraint:[NSLayoutConstraint constraintWithItem:_beaconButton attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:[self view] attribute:NSLayoutAttributeHeight multiplier:0.5f constant:0.f]];
     
     _ASSERT( !_listenerButton );
-    _listenerButton = [UIButton new];
+    _listenerButton = [[UIButton buttonWithType:UIButtonTypeSystem] retain];
     [_listenerButton setTranslatesAutoresizingMaskIntoConstraints:NO];
-//    [_listenerButton setTintColor:[UIColor blueColor]];
-    [[_listenerButton titleLabel] setTextColor:[UIColor blueColor]];
+    [_listenerButton setTintColor:[UIColor blueColor]];
     [_listenerButton addTarget:self action:@selector( startListenerRole: ) forControlEvents:UIControlEventTouchUpInside];
     [_listenerButton setTitle:@"Start Listener" forState:UIControlStateNormal];
+    [_listenerButton setTitleColor:[UIColor purpleColor] forState:UIControlStateHighlighted];
+    [[_listenerButton titleLabel] setFont:[UIFont systemFontOfSize:50.f]];
     [[self view] addSubview:_listenerButton];
     
     [[self view] addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_listenerButton]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings( _listenerButton )]];
@@ -80,7 +87,10 @@
     _ASSERT( [sender isEqual:_beaconButton] );
     _ASSERT( _core );
     
-    [_core startPeripheralRoleSession];
+    if ( [_core isAdvertising] )
+        [_core stopPeripheralRoleSession];
+    else
+        [_core startPeripheralRoleSession];
 }
 
 - (void)startListenerRole:(UIButton *)sender
@@ -89,6 +99,16 @@
     _ASSERT( _core );
     
     [_core startCentralRoleSession];
+}
+
+- (void)didStartAdvertising:(NSNotification *)aNotification
+{
+    [_beaconButton setTitle:@"Stop Beacon" forState:UIControlStateNormal];
+}
+
+- (void)didStopAdvertising:(NSNotification *)aNotification
+{
+    [_beaconButton setTitle:@"Start Beacon" forState:UIControlStateNormal];
 }
 
 @end
