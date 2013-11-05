@@ -44,7 +44,7 @@
     [_core initBeacon];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didStartAdvertising:) name:DidStartAdvertisingNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didStartAdvertising:) name:DidStopAdvertisingNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didStopAdvertising:) name:DidStopAdvertisingNotification object:nil];
     
     _ASSERT( !_beaconButton );
     _beaconButton = [[UIButton buttonWithType:UIButtonTypeSystem] retain];

@@ -17,6 +17,7 @@ extern NSString*  SERVICE_UUID;
 // NOTIFICATIONS
 extern NSString* DidStartAdvertisingNotification;
 extern NSString* DidStopAdvertisingNotification;
+extern NSString* DidFaildToStartAdvertisingNotification;
 
 #pragma mark - @interface NotifierCore
 @interface NotifierCore : NSObject

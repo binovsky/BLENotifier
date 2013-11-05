@@ -97,6 +97,7 @@ const static NSString*  BEACON_IDENTIFIER       = @"com.binovsky.BLENotifier";
 {
     [_peripheralManager stopAdvertising];
     [_peripheralManager removeAllServices];
+    SAFE_RELEASE( _peripheralManager );
     
     [[NSNotificationCenter defaultCenter] postNotificationName:DidStopAdvertisingNotification object:nil];
 }
@@ -257,7 +258,7 @@ const static NSString*  BEACON_IDENTIFIER       = @"com.binovsky.BLENotifier";
     log = [log stringByAppendingString:@"\n"];
     log = [log stringByAppendingString:@"RSSI: "];
     log = [log stringByAppendingString:[NSString stringWithFormat:@"%li", (long)beacon.rssi]];
-    log = [log stringByAppendingString:@"\n"];
+    log = [log stringByAppendingString:@"\n\n\n"];
     
     DLog( @"%@", log );
 }
