@@ -177,6 +177,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8C237EA8182BFD23008E0D16 /* Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
+		8C237EA9182BFD23008E0D16 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		8C237EAB182BFD23008E0D16 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		8C237EAC182BFD23008E0D16 /* VariosMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VariosMacros.h; sourceTree = "<group>"; };
 		8C36000E17F4C6E4004860B5 /* BLENotifierTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLENotifierTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C36000F17F4C6E4004860B5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		8C36FFEA17F4C6E4004860B5 /* BLENotifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLENotifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -387,6 +391,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C237EA5182BFD23008E0D16 /* App */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8C237EA6182BFD23008E0D16 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8C237EA7182BFD23008E0D16 /* Categories */,
+				8C237EA9182BFD23008E0D16 /* Common.h */,
+				8C237EAA182BFD23008E0D16 /* CommonMacros */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8C237EA7182BFD23008E0D16 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				8C237EA8182BFD23008E0D16 /* Categories.h */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		8C237EAA182BFD23008E0D16 /* CommonMacros */ = {
+			isa = PBXGroup;
+			children = (
+				8C237EAB182BFD23008E0D16 /* Macros.h */,
+				8C237EAC182BFD23008E0D16 /* VariosMacros.h */,
+			);
+			path = CommonMacros;
+			sourceTree = "<group>";
+		};
 		8C36FFE117F4C6E4004860B5 = {
 			isa = PBXGroup;
 			children = (
@@ -503,8 +541,8 @@
 			children = (
 				8CAE84BF18227B8B006CD8AC /* CommonFont.h */,
 				8CAE84C018227B8B006CD8AC /* CommonFont.m */,
-				8CAE84C118227B8B006CD8AC /* Macros.h */,
 				8CAE84C218227B8B006CD8AC /* VariosMacros.h */,
+				8CAE84C118227B8B006CD8AC /* Macros.h */,
 			);
 			path = CommonMacros;
 			sourceTree = "<group>";
@@ -549,6 +587,8 @@
 		8CAE84D318227B8B006CD8AC /* OSX BLENotifier */ = {
 			isa = PBXGroup;
 			children = (
+				8C237EA5182BFD23008E0D16 /* App */,
+				8C237EA6182BFD23008E0D16 /* Common */,
 				8CAE84D418227B8C006CD8AC /* AppDelegate.h */,
 				8CAE84D518227B8C006CD8AC /* AppDelegate.m */,
 				8CAE84D618227B8C006CD8AC /* MainMenu.xib */,
