@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C237EB0182D0313008E0D16 /* ble_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C237EAE182D0313008E0D16 /* ble_icon.png */; };
+		8C237EB1182D0313008E0D16 /* ble_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C237EAF182D0313008E0D16 /* ble_icon@2x.png */; };
 		8C36001017F4C6E4004860B5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36000F17F4C6E4004860B5 /* XCTest.framework */; };
 		8C36001117F4C6E4004860B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36FFED17F4C6E4004860B5 /* Foundation.framework */; };
 		8C36001217F4C6E4004860B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36FFF117F4C6E4004860B5 /* UIKit.framework */; };
@@ -181,6 +183,8 @@
 		8C237EA9182BFD23008E0D16 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		8C237EAB182BFD23008E0D16 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		8C237EAC182BFD23008E0D16 /* VariosMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VariosMacros.h; sourceTree = "<group>"; };
+		8C237EAE182D0313008E0D16 /* ble_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ble_icon.png; sourceTree = "<group>"; };
+		8C237EAF182D0313008E0D16 /* ble_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ble_icon@2x.png"; sourceTree = "<group>"; };
 		8C36000E17F4C6E4004860B5 /* BLENotifierTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLENotifierTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C36000F17F4C6E4004860B5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		8C36FFEA17F4C6E4004860B5 /* BLENotifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLENotifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -425,6 +429,15 @@
 			path = CommonMacros;
 			sourceTree = "<group>";
 		};
+		8C237EAD182D0313008E0D16 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8C237EAE182D0313008E0D16 /* ble_icon.png */,
+				8C237EAF182D0313008E0D16 /* ble_icon@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		8C36FFE117F4C6E4004860B5 = {
 			isa = PBXGroup;
 			children = (
@@ -481,8 +494,8 @@
 			isa = PBXGroup;
 			children = (
 				8CAE84B018227B8B006CD8AC /* BLENotifier */,
-				8CAE84CE18227B8B006CD8AC /* BLENotifierTests */,
 				8CAE84D318227B8B006CD8AC /* OSX BLENotifier */,
+				8CAE84CE18227B8B006CD8AC /* BLENotifierTests */,
 				8CAE84EC18227B8C006CD8AC /* OSX BLENotifierTests */,
 			);
 			path = Application;
@@ -599,6 +612,7 @@
 				8CAE84DE18227B8C006CD8AC /* OSX BLENotifier-Info.plist */,
 				8CAE84DF18227B8C006CD8AC /* OSX BLENotifier-Prefix.pch */,
 				8CAE84E018227B8C006CD8AC /* OSX_BLENotifier.xcdatamodeld */,
+				8C237EAD182D0313008E0D16 /* Resources */,
 			);
 			path = "OSX BLENotifier";
 			sourceTree = "<group>";
@@ -1052,6 +1066,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C237EB1182D0313008E0D16 /* ble_icon@2x.png in Resources */,
+				8C237EB0182D0313008E0D16 /* ble_icon.png in Resources */,
 				8CAE85EB18227B8C006CD8AC /* OSX BLENotifier-Info.plist in Resources */,
 				8CAE85CF18227B8C006CD8AC /* InfoPlist.strings in Resources */,
 				8CAE85BF18227B8C006CD8AC /* MainMenu.xib in Resources */,
@@ -1789,7 +1805,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1825,7 +1841,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (

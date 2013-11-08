@@ -71,6 +71,7 @@ const static NSString*  BEACON_IDENTIFIER       = @"com.binovsky.BLENotifier";
     _characteristics = [[CBMutableCharacteristic alloc] initWithType:_serviceUUID properties:CBCharacteristicPropertyNotify value:nil permissions:CBAttributePermissionsReadable];
     _service = [[CBMutableService alloc] initWithType:_serviceUUID primary:YES];
     [_service setCharacteristics:@[_characteristics]];
+    [_service]
     
     // CENTRAL
     _locationManager = [[CLLocationManager alloc] init];

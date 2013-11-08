@@ -8,8 +8,9 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 {
-    IBOutlet NSMenu *_statusMenu;
+    NSStatusBar *_statusBar;
     NSStatusItem * _statusItem;
+    NSMenu *_statusMenu;
 }
 
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
