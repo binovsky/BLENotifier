@@ -49,7 +49,6 @@
 		8CAE859C18227B8C006CD8AC /* BLENotifierTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CAE84D018227B8B006CD8AC /* BLENotifierTests.m */; };
 		8CAE85A818227B8C006CD8AC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8CAE84D118227B8B006CD8AC /* InfoPlist.strings */; };
 		8CAE85B418227B8C006CD8AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CAE84D518227B8C006CD8AC /* AppDelegate.m */; };
-		8CAE85BF18227B8C006CD8AC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CAE84D618227B8C006CD8AC /* MainMenu.xib */; };
 		8CAE85C718227B8C006CD8AC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8CAE84D818227B8C006CD8AC /* Credits.rtf */; };
 		8CAE85CF18227B8C006CD8AC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8CAE84DA18227B8C006CD8AC /* InfoPlist.strings */; };
 		8CAE85D718227B8C006CD8AC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CAE84DC18227B8C006CD8AC /* Images.xcassets */; };
@@ -225,7 +224,6 @@
 		8CAE84D218227B8B006CD8AC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8CAE84D418227B8C006CD8AC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8CAE84D518227B8C006CD8AC /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8CAE84D718227B8C006CD8AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		8CAE84D918227B8C006CD8AC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		8CAE84DB18227B8C006CD8AC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8CAE84DC18227B8C006CD8AC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -604,7 +602,6 @@
 				8C237EA6182BFD23008E0D16 /* Common */,
 				8CAE84D418227B8C006CD8AC /* AppDelegate.h */,
 				8CAE84D518227B8C006CD8AC /* AppDelegate.m */,
-				8CAE84D618227B8C006CD8AC /* MainMenu.xib */,
 				8CAE84D818227B8C006CD8AC /* Credits.rtf */,
 				8CAE84DA18227B8C006CD8AC /* InfoPlist.strings */,
 				8CAE84DC18227B8C006CD8AC /* Images.xcassets */,
@@ -1070,7 +1067,6 @@
 				8C237EB0182D0313008E0D16 /* ble_icon.png in Resources */,
 				8CAE85EB18227B8C006CD8AC /* OSX BLENotifier-Info.plist in Resources */,
 				8CAE85CF18227B8C006CD8AC /* InfoPlist.strings in Resources */,
-				8CAE85BF18227B8C006CD8AC /* MainMenu.xib in Resources */,
 				8CAE85C718227B8C006CD8AC /* Credits.rtf in Resources */,
 				8CAE85D718227B8C006CD8AC /* Images.xcassets in Resources */,
 			);
@@ -1241,14 +1237,6 @@
 				8CAE84D218227B8B006CD8AC /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		8CAE84D618227B8C006CD8AC /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8CAE84D718227B8C006CD8AC /* Base */,
-			);
-			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 		8CAE84D818227B8C006CD8AC /* Credits.rtf */ = {
