@@ -6,11 +6,11 @@
 //  Copyright (c) 2013 Michal Binovsky. All rights reserved.
 //
 
+#import <App/RootController.h>
+
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 {
-    NSStatusBar *_statusBar;
-    NSStatusItem * _statusItem;
-    NSMenu *_statusMenu;
+    RootController *_rootController;
 }
 
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;

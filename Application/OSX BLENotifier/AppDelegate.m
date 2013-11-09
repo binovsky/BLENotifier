@@ -16,33 +16,16 @@
 
 - (void)dealloc
 {
-    SAFE_RELEASE( _statusBar );
-    SAFE_RELEASE( _statusItem );
-    SAFE_RELEASE( _statusMenu );
+    SAFE_RELEASE( _rootController );
     
     [super dealloc];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    _statusBar = [[NSStatusBar systemStatusBar] retain];
-    
-    _statusItem = [[_statusBar statusItemWithLength:NSVariableStatusItemLength] retain];
-    [_statusItem setImage:[NSImage imageNamed:@"ble_icon"]];
-    [_statusItem setHighlightMode:YES];
-    
-    _statusMenu = [[NSMenu alloc] initWithTitle:@"BLENotifier"];
-    [_statusItem setMenu:_statusMenu];
-    
-    NSMenuItem *item = [[NSMenuItem alloc] init];
-    [item setTitle:@"Item 1"];
-    
-    [_statusMenu addItem:item];
-
-    
-//    NotifierCore *core = [NotifierCore instance];
-//    [core initBeacon];
-//    [core startCentralRoleSession];
+    _ASSERT( !_rootController );
+    _rootController = [[RootController alloc] init];
+    [_rootController loadView];
 }
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "M.B..OSX_BLENotifier" in the user's Application Support directory.
