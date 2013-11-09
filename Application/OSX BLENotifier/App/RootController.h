@@ -7,13 +7,19 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <App/Views/BarItemView.h>
+#import <App/Popover/PopoverContentController.h>
 
-@interface RootController : NSViewController
+#pragma mark - @Interface RootController
+@interface RootController : NSViewController < NSMenuDelegate, BarItemViewDelegate >
 {
     NotifierCore *_core;
     NSStatusBar *_statusBar;
     NSStatusItem * _statusItem;
     NSMenu *_statusMenu;
+    BarItemView *_barView;
+    NSPopover *_popover;
+    PopoverContentController *_popoverContentController;
 }
 
 @end

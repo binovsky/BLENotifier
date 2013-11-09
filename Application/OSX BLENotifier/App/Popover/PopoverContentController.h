@@ -1,5 +1,5 @@
 //
-//  NotifierItem.h
+//  PopoverContentController.h
 //  BLENotifier
 //
 //  Created by Michal Binovsky on 09/11/13.
@@ -8,6 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface NotifierItem : NSMenuItem
+@interface PopoverContentController : NSViewController
 
 @end
