@@ -7,6 +7,7 @@
 //
 
 #import "RootController.h"
+#import <App/Views/NotifierItem.h>
 
 @interface RootController ()
 
@@ -46,10 +47,8 @@
     _statusMenu = [[NSMenu alloc] initWithTitle:@"BLENotifier"];
     [_statusItem setMenu:_statusMenu];
     
-    NSMenuItem *item = [[NSMenuItem alloc] init];
-    [item setTitle:@"Item 1"];
-    [item setTarget:self];
-    [item setAction:@selector(startBeaconSearching:)];
+    NotifierItem *item = [[NotifierItem alloc] init];
+    
     
     [_statusMenu addItem:item];
 }

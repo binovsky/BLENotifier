@@ -16,6 +16,8 @@
 		8C36FFF017F4C6E4004860B5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36FFEF17F4C6E4004860B5 /* CoreGraphics.framework */; };
 		8C36FFF217F4C6E4004860B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C36FFF117F4C6E4004860B5 /* UIKit.framework */; };
 		8C5B54CF182E420D009F1D1E /* RootController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C5B54CE182E420D009F1D1E /* RootController.m */; };
+		8C6A93CF182E831A00A0F48B /* NotifierItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6A93CE182E831A00A0F48B /* NotifierItem.m */; };
+		8C6A93D2182E840D00A0F48B /* ContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6A93D1182E840D00A0F48B /* ContentView.m */; };
 		8C852AE018280601008F041C /* Library.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C852ADF18280601008F041C /* Library.h */; };
 		8C852AE3182818C7008F041C /* UIAlertView+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C852AE1182818C7008F041C /* UIAlertView+Extensions.h */; };
 		8C852AE4182818C7008F041C /* UIAlertView+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C852AE2182818C7008F041C /* UIAlertView+Extensions.m */; };
@@ -193,6 +195,10 @@
 		8C36FFF117F4C6E4004860B5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8C5B54CD182E420D009F1D1E /* RootController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootController.h; sourceTree = "<group>"; };
 		8C5B54CE182E420D009F1D1E /* RootController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootController.m; sourceTree = "<group>"; };
+		8C6A93CD182E831A00A0F48B /* NotifierItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifierItem.h; sourceTree = "<group>"; };
+		8C6A93CE182E831A00A0F48B /* NotifierItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifierItem.m; sourceTree = "<group>"; };
+		8C6A93D0182E840D00A0F48B /* ContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentView.h; sourceTree = "<group>"; };
+		8C6A93D1182E840D00A0F48B /* ContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentView.m; sourceTree = "<group>"; };
 		8C852ADF18280601008F041C /* Library.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Library.h; sourceTree = "<group>"; };
 		8C852AE1182818C7008F041C /* UIAlertView+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Extensions.h"; sourceTree = "<group>"; };
 		8C852AE2182818C7008F041C /* UIAlertView+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Extensions.m"; sourceTree = "<group>"; };
@@ -399,6 +405,7 @@
 		8C237EA5182BFD23008E0D16 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				8C6A93CC182E82F000A0F48B /* Views */,
 				8C5B54CD182E420D009F1D1E /* RootController.h */,
 				8C5B54CE182E420D009F1D1E /* RootController.m */,
 			);
@@ -491,6 +498,17 @@
 				8CF299C41821B29700428BA5 /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C6A93CC182E82F000A0F48B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8C6A93CD182E831A00A0F48B /* NotifierItem.h */,
+				8C6A93CE182E831A00A0F48B /* NotifierItem.m */,
+				8C6A93D0182E840D00A0F48B /* ContentView.h */,
+				8C6A93D1182E840D00A0F48B /* ContentView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		8CAE84AF18227B8B006CD8AC /* Application */ = {
@@ -1164,7 +1182,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C6A93CF182E831A00A0F48B /* NotifierItem.m in Sources */,
 				8CAE85F518227B8C006CD8AC /* OSX_BLENotifier.xcdatamodeld in Sources */,
+				8C6A93D2182E840D00A0F48B /* ContentView.m in Sources */,
 				8CAE85E018227B8C006CD8AC /* main.m in Sources */,
 				8CAE85B418227B8C006CD8AC /* AppDelegate.m in Sources */,
 				8C5B54CF182E420D009F1D1E /* RootController.m in Sources */,
