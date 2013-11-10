@@ -8,6 +8,24 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class PopoverContentView;
+
+#pragma mark - @Protocol PopoverContentView
+@protocol PopoverContentViewDelegate <NSObject>
+
+    @required
+    - (void)popoverContentView:(PopoverContentView *)popover startSeekingButtonTapped:(NSButton *)btn;
+
+@end
+
+#pragma mark - @Interface PopoverContentView
 @interface PopoverContentView : NSView
+{
+    NSButton    *_startSeekingBtn;
+}
+
+
+    #pragma mark - @Properties
+    @property ( nonatomic, assign ) id<PopoverContentViewDelegate>      contentViewDelegate;
 
 @end

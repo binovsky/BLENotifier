@@ -19,7 +19,7 @@
 {
     if ( ( self = [super init] ) )
     {
-        // Initialization code here.
+        [self initDefaults];
     }
     
     return self;
@@ -27,6 +27,8 @@
 
 - (void)dealloc
 {
+    SAFE_RELEASE( _core );
+    
     [super dealloc];
 }
 
@@ -34,7 +36,10 @@
 #pragma mark - @Override
 - (void)loadView
 {
+    _ASSERT( _core );
+    
     PopoverContentView *v = [PopoverContentView new];
+    [v setContentViewDelegate:self];
     
     [v addConstraint:[NSLayoutConstraint constraintWithItem:v attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.f constant:200.f]];
     [v addConstraint:[NSLayoutConstraint constraintWithItem:v attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.f constant:100.f]];
@@ -44,5 +49,25 @@
 }
 
 #pragma mark - @Custom
+- (void)initDefaults
+{
+    _ASSERT( !_core );
+    
+    _core = [NotifierCore instance];
+}
+
+- (void)startBeaconSearching:(id)sender
+{
+    _ASSERT( _core );
+    
+    [_core initBeacon];
+    [_core startCentralRoleSession];
+}
+
+#pragma mark - PopoverContentViewDelegate
+- (void)popoverContentView:(PopoverContentView *)popover startSeekingButtonTapped:(NSButton *)btn
+{
+    [self startBeaconSearching:btn];
+}
 
 @end

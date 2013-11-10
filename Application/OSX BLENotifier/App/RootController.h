@@ -13,7 +13,6 @@
 #pragma mark - @Interface RootController
 @interface RootController : NSViewController < NSMenuDelegate, BarItemViewDelegate >
 {
-    NotifierCore *_core;
     NSStatusBar *_statusBar;
     NSStatusItem * _statusItem;
     BarItemView *_barView;

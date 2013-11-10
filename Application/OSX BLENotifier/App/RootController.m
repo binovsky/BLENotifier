@@ -26,7 +26,6 @@
 
 - (void)dealloc
 {
-    SAFE_RELEASE( _core );
     SAFE_RELEASE( _statusBar );
     SAFE_RELEASE( _statusItem );
     SAFE_RELEASE( _barView );
@@ -41,7 +40,6 @@
 #pragma mark - @Override
 - (void)loadView
 {
-    _ASSERT( _core );
     _ASSERT( _statusBar );
     
     _barView = [[[BarItemView alloc] init] autorelease];
@@ -71,12 +69,10 @@
 #pragma mark - @Custom
 - (void)initDefaults
 {
-    _ASSERT( !_core );
     _ASSERT( !_statusBar );
     _ASSERT( !_popover );
     _ASSERT( !_popoverContentController );
     
-    _core = [NotifierCore instance];
     _statusBar = [[NSStatusBar systemStatusBar] retain];
 
     _popoverContentController = [[PopoverContentController alloc] init];
@@ -85,14 +81,6 @@
     [_popover setAnimates:YES];
     
     [_popover setContentViewController:_popoverContentController];
-}
-
-- (void)startBeaconSearching:(id)sender
-{
-    _ASSERT( _core );
-    
-    [_core initBeacon];
-    [_core startCentralRoleSession];
 }
 
 - (void)settingsItemTapped:(id)sender
