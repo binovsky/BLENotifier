@@ -16,10 +16,10 @@
     NotifierCore *_core;
     NSStatusBar *_statusBar;
     NSStatusItem * _statusItem;
-    NSMenu *_statusMenu;
     BarItemView *_barView;
     NSPopover *_popover;
     PopoverContentController *_popoverContentController;
+    NSMenu *_secondaryMenu;
 }
 
 @end

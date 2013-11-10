@@ -29,10 +29,10 @@
     SAFE_RELEASE( _core );
     SAFE_RELEASE( _statusBar );
     SAFE_RELEASE( _statusItem );
-    SAFE_RELEASE( _statusMenu );
     SAFE_RELEASE( _barView );
     SAFE_RELEASE( _popover );
     SAFE_RELEASE( _popoverContentController );
+    SAFE_RELEASE( _secondaryMenu );
     
     [super dealloc];
 }
@@ -50,11 +50,22 @@
     _statusItem = [[_statusBar statusItemWithLength:NSVariableStatusItemLength] retain];
     [_statusItem setView:_barView];
     
-    _statusMenu = [[NSMenu alloc] initWithTitle:@"BLENotifier"];
-    [_statusMenu setAutoenablesItems:NO];
-    [_statusMenu setDelegate:self];
+    _secondaryMenu = [[NSMenu alloc] initWithTitle:@"SecondaryMenu"];
+    [_secondaryMenu setAutoenablesItems:YES];
+    [_secondaryMenu setDelegate:self];
     
-    [_statusItem setMenu:_statusMenu];
+    NSMenuItem *settingsItem = [[NSMenuItem alloc] initWithTitle:@"Settings ..." action:@selector(settingsItemTapped:) keyEquivalent:@","];
+    [settingsItem setTarget:self];
+    [settingsItem setAction:@selector(settingsItemTapped:)];
+    [settingsItem setKeyEquivalentModifierMask:NSCommandKeyMask];
+
+    NSMenuItem *quitItem = [[NSMenuItem alloc] initWithTitle:@"Quit Notifier" action:@selector(quitItemTapped:) keyEquivalent:@"q"];
+    [quitItem setTarget:self];
+    [quitItem setAction:@selector(quitItemTapped:)];
+    [quitItem setKeyEquivalentModifierMask:NSCommandKeyMask];
+    
+    [_secondaryMenu addItem:settingsItem];
+    [_secondaryMenu addItem:quitItem];
 }
 
 #pragma mark - @Custom
@@ -84,11 +95,24 @@
     [_core startCentralRoleSession];
 }
 
+- (void)settingsItemTapped:(id)sender
+{
+    DLog( @"%@", NSStringFromSelector( _cmd ) );
+}
+
+- (void)quitItemTapped:(id)sender
+{
+    DLog( @"%@", NSStringFromSelector( _cmd ) );
+}
+
 #pragma mark - BarItemViewDelegate
 - (void)barItemViewShouldShow:(BarItemView *)barView
 {
     _ASSERT( [barView isEqual:_barView] );
-    
+    _ASSERT( _popover );
+    _ASSERT( _popoverContentController );
+    _ASSERT( _statusItem );
+    _ASSERT( _secondaryMenu );
     
     [_popover showRelativeToRect:[_barView frame] ofView:_barView preferredEdge:NSMinYEdge];
 }
@@ -101,6 +125,31 @@
     
     [_popover setAnimates:YES];
     [_popover close];
+}
+
+- (void)barItemViewSecondaryShouldShow:(BarItemView *)barView
+{
+    _ASSERT( [barView isEqual:_barView] );
+    _ASSERT( _statusItem );
+    _ASSERT( _secondaryMenu );
+    
+
+    [_statusItem popUpStatusItemMenu:_secondaryMenu];
+}
+
+- (void)barItemViewSecondaryShouldHide:(BarItemView *)barView
+{
+    _ASSERT( [barView isEqual:_barView] );
+    _ASSERT( _statusItem );
+    _ASSERT( _secondaryMenu );
+    
+    [_secondaryMenu cancelTracking];
+}
+
+#pragma mark - NSMenuDelegate
+- (void)menuDidClose:(NSMenu *)menu
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:BarSecondaryMenuDidCloseNotification object:nil];
 }
 
 @end
