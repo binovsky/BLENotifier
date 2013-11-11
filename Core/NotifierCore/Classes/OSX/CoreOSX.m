@@ -14,6 +14,7 @@
 {
     CBCentralManager *_centralManager;
     CBUUID *_serviceUUID;
+    NSMutableArray *_peripherals;
 }
 
 @end
@@ -25,6 +26,8 @@
 {
     SAFE_RELEASE( _centralManager );
     SAFE_RELEASE( _serviceUUID );
+    SAFE_RELEASE( _peripherals );
+    
     [super dealloc];
 }
 
@@ -33,8 +36,10 @@
     _ASSERT( !_serviceUUID );
     
     _serviceUUID = [[CBUUID UUIDWithString:SERVICE_UUID] retain];
+    _peripherals = [[NSMutableArray alloc] initWithCapacity:0];
 }
 
+#pragma mark - @Custom
 // UNSUPPORTED ON OS X
 - (void)startPeripheralRoleSession
 {
@@ -63,6 +68,17 @@
 - (BOOL)isAdvertising
 {
     return NO; // UNSUPPORTED ON OS X
+}
+
+- (BOOL)isPeripheralAlreadyKnown:(CBPeripheral *)peripheral
+{
+    for ( CBPeripheral *known in _peripherals )
+    {
+        if ( [peripheral isEqual:known] )
+            return YES;
+    }
+    
+    return NO;
 }
 
 #pragma mark - CBCentralManagerDelegate
@@ -94,26 +110,25 @@
     _ASSERT( [central isEqual:_centralManager] );
     DLog( @"\n\n%@\nDiscovered %@ \n\n advertisedData: %@ \n\n services: %@ \n\n RSSI: %@", NSStringFromSelector( _cmd ), [peripheral description], advertisementData, [peripheral services], [RSSI stringValue] );
     
-//    for ( CBService *service in [peripheral services] )
-//    {
-//        DLog( @" ------ SERVICE ------\n\n %@ ", [service description] );
-//        for ( CBCharacteristic *characteristic in [service characteristics] )
-//        {
-//            DLog( @" - characteristic: %@", [characteristic description] );
-//        }
-//    }
-    
-    [peripheral discoverServices:@[ _serviceUUID ]];
-    [peripheral setDelegate:self];
-    
-//    [_centralManager scanForPeripheralsWithServices:nil options:nil];
-//    [_centralManager connectPeripheral:peripheral options:nil];
+    if ( ![self isPeripheralAlreadyKnown:peripheral] )
+    {
+        [_peripherals addObject:peripheral];
+        
+        NSDictionary *opt = @{ @"CBConnectPeripheralOptionNotifyOnConnectionKey" : @( YES ), @"CBConnectPeripheralOptionNotifyOnDisconnectionKey" : @( YES ) };
+        [_centralManager connectPeripheral:peripheral options:opt];
+    }
 }
 
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral
 {
     _ASSERT( [central isEqual:_centralManager] );
     DLog( @"\n\n%@\nDiscovered %@", NSStringFromSelector( _cmd ), [peripheral description] );
+    
+    if ( [self isPeripheralAlreadyKnown:peripheral] )
+    {
+        [peripheral discoverServices:nil/*@[ _serviceUUID ]*/];
+        [peripheral setDelegate:self];
+    }
 }
 
 - (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error
@@ -141,18 +156,27 @@
     
     if ( error )
     {
-        DLog( @"Error publishing service: %@", [error localizedDescription] );
+        DLog( @"Error discovering services: %@", [error localizedDescription] );
     }
-    
-    DLog( @"PERIPHERAL: %@ SERVICES: %@", [peripheral description], [peripheral services] );
     
     for ( CBService *service in [peripheral services] )
     {
-        DLog( @" ------ SERVICE ------\n\n %@ ", [service description] );
-        for ( CBCharacteristic *characteristic in [service characteristics] )
-        {
-            DLog( @" - characteristic: %@", [characteristic description] );
-        }
+        DLog( @" <------> SERVICE <------> %@ ", [service description] );
+        
+        [peripheral discoverCharacteristics:nil forService:service];
+    }
+}
+
+- (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error
+{
+    if ( error )
+    {
+        DLog( @"Error discovering service characteristics: %@", [error localizedDescription] );
+    }
+    
+    for (CBCharacteristic *characteristic in service.characteristics)
+    {
+        DLog(@"Discovered characteristic %@", characteristic);
     }
 }
 
