@@ -8,6 +8,6 @@
 
 #import <NotifierCore/NotifierCore.h>
 
-@interface CoreOSX : NotifierCore < CBCentralManagerDelegate >
+@interface CoreOSX : NotifierCore < CBCentralManagerDelegate, CBPeripheralDelegate >
 
 @end

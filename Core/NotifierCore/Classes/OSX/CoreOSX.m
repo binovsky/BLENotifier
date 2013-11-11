@@ -12,7 +12,7 @@
 
 @interface CoreOSX()
 {
-    CBCentralManager    *_centralManager;
+    CBCentralManager *_centralManager;
     CBUUID *_serviceUUID;
 }
 
@@ -38,13 +38,13 @@
 // UNSUPPORTED ON OS X
 - (void)startPeripheralRoleSession
 {
-    [NSException raise:@"UnsupportedForOS" format:@"Peripheral role is unsupported on OS X"];
+    [NSException raise:@"UnsupportedForOSX" format:@"Peripheral role is unsupported on OS X"];
 }
 
 // UNSUPPORTED ON OS X
 - (void)stopPeripheralRoleSession
 {
-    [NSException raise:@"UnsupportedForOS" format:@"Peripheral role is unsupported on OS X"];
+    [NSException raise:@"UnsupportedForOSX" format:@"Peripheral role is unsupported on OS X"];
 }
 
 - (void)startCentralRoleSession
@@ -74,7 +74,9 @@
     {
         case CBCentralManagerStatePoweredOn:
         {
-            [_centralManager scanForPeripheralsWithServices:@[ _serviceUUID ] options:nil];
+            NSDictionary * opts = @{ CBCentralManagerScanOptionAllowDuplicatesKey : @( NO ) };
+            [_centralManager scanForPeripheralsWithServices:nil /*@[ _serviceUUID ]*/ options:opts];
+            DLog( @"\n\n\n **** CENTRAL MANAGER **** \n\n ----- \n %@\n ---- \n\n", [_centralManager description] );
         }
             break;
             
@@ -90,9 +92,22 @@
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI
 {
     _ASSERT( [central isEqual:_centralManager] );
-    DLog( @"\n\n%@\nDiscovered %@", NSStringFromSelector( _cmd ), [peripheral description] );
+    DLog( @"\n\n%@\nDiscovered %@ \n\n advertisedData: %@ \n\n services: %@ \n\n RSSI: %@", NSStringFromSelector( _cmd ), [peripheral description], advertisementData, [peripheral services], [RSSI stringValue] );
     
-    [_centralManager connectPeripheral:peripheral options:nil];
+//    for ( CBService *service in [peripheral services] )
+//    {
+//        DLog( @" ------ SERVICE ------\n\n %@ ", [service description] );
+//        for ( CBCharacteristic *characteristic in [service characteristics] )
+//        {
+//            DLog( @" - characteristic: %@", [characteristic description] );
+//        }
+//    }
+    
+    [peripheral discoverServices:@[ _serviceUUID ]];
+    [peripheral setDelegate:self];
+    
+//    [_centralManager scanForPeripheralsWithServices:nil options:nil];
+//    [_centralManager connectPeripheral:peripheral options:nil];
 }
 
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral
@@ -117,6 +132,28 @@
 {
     _ASSERT( [central isEqual:_centralManager] );
     DLog( @"\n\n%@\nDiscovered %@", NSStringFromSelector( _cmd ), peripherals );
+}
+
+#pragma mark - CBPeripheralDelegate
+- (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error
+{
+    DLog( @" /\\/\\/\\/\\/\\  %@  /\\/\\/\\/\\/\\", NSStringFromSelector( _cmd ) );
+    
+    if ( error )
+    {
+        DLog( @"Error publishing service: %@", [error localizedDescription] );
+    }
+    
+    DLog( @"PERIPHERAL: %@ SERVICES: %@", [peripheral description], [peripheral services] );
+    
+    for ( CBService *service in [peripheral services] )
+    {
+        DLog( @" ------ SERVICE ------\n\n %@ ", [service description] );
+        for ( CBCharacteristic *characteristic in [service characteristics] )
+        {
+            DLog( @" - characteristic: %@", [characteristic description] );
+        }
+    }
 }
 
 @end

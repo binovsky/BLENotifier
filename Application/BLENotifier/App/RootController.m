@@ -103,12 +103,24 @@
 
 - (void)didStartAdvertising:(NSNotification *)aNotification
 {
-    [_beaconButton setTitle:@"Stop Beacon" forState:UIControlStateNormal];
+    if ( [_core isAdvertising] )
+    {
+        [_beaconButton setTitle:@"Stop Beacon" forState:UIControlStateNormal];
+    }
+    else
+    {
+        [UIAlertView showSimpleAlertWithTitle:@"Start Advertising Error" message:@"Unable to perform advertising a beacon data" andCancelButtonTitle:@"Ok"];
+        
+        [_core stopPeripheralRoleSession];
+    }
 }
 
 - (void)didStopAdvertising:(NSNotification *)aNotification
 {
-    [_beaconButton setTitle:@"Start Beacon" forState:UIControlStateNormal];
+    if ( [_core isAdvertising] )
+        [UIAlertView showSimpleAlertWithTitle:@"Stop Advertising Error" message:@"Unable to stop advertising a beacon data" andCancelButtonTitle:@"Ok"];
+    else
+        [_beaconButton setTitle:@"Start Beacon" forState:UIControlStateNormal];
 }
 
 @end

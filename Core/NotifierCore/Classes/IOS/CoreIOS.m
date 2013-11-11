@@ -65,13 +65,12 @@ const static NSString*  BEACON_IDENTIFIER       = @"com.binovsky.BLENotifier";
     // COMMON
     _serviceUUID = [CBUUID UUIDWithString:(NSString *)SERVICE_UUID];
     _proximityUUID = [[NSUUID alloc] initWithUUIDString:(NSString *)SERVICE_UUID];
-    _beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:_proximityUUID major:1 minor:1 identifier:(NSString *)BEACON_IDENTIFIER];
+    _beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:_proximityUUID major:10 minor:1 identifier:(NSString *)BEACON_IDENTIFIER];
     
     // PERIPHERAL
     _characteristics = [[CBMutableCharacteristic alloc] initWithType:_serviceUUID properties:CBCharacteristicPropertyNotify value:nil permissions:CBAttributePermissionsReadable];
     _service = [[CBMutableService alloc] initWithType:_serviceUUID primary:YES];
     [_service setCharacteristics:@[_characteristics]];
-    [_service]
     
     // CENTRAL
     _locationManager = [[CLLocationManager alloc] init];
@@ -88,7 +87,6 @@ const static NSString*  BEACON_IDENTIFIER       = @"com.binovsky.BLENotifier";
     _ASSERT( _proximityUUID );
     _ASSERT( _beaconRegion );
     _ASSERT( _characteristics );
-    
     
     _ASSERT( !_peripheralManager );
     _peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil options:nil];
@@ -136,7 +134,6 @@ const static NSString*  BEACON_IDENTIFIER       = @"com.binovsky.BLENotifier";
         case CBPeripheralManagerStatePoweredOn:
         {
             [_peripheralManager addService:_service];
-            [[NSNotificationCenter defaultCenter] postNotificationName:DidStartAdvertisingNotification object:nil];
         }
             break;
             
@@ -173,7 +170,13 @@ const static NSString*  BEACON_IDENTIFIER       = @"com.binovsky.BLENotifier";
         [_peripheralManager removeService:(CBMutableService *)service];
     }
     
-    [_peripheralManager startAdvertising:@{ CBAdvertisementDataServiceUUIDsKey : @[_service.UUID] }];
+    NSMutableDictionary *advertisingData = [[NSMutableDictionary alloc] initWithCapacity:0];
+    [advertisingData addEntriesFromDictionary:@{ CBAdvertisementDataServiceUUIDsKey : @[_service.UUID] }];
+    [advertisingData addEntriesFromDictionary:[_beaconRegion peripheralDataWithMeasuredPower:nil]];
+    
+    DLog( @"AVERTISING DATA: %@", advertisingData );
+    
+    [_peripheralManager startAdvertising:advertisingData];
 }
 
 - (void)peripheralManagerDidStartAdvertising:(CBPeripheralManager *)peripheral error:(NSError *)error
@@ -184,7 +187,9 @@ const static NSString*  BEACON_IDENTIFIER       = @"com.binovsky.BLENotifier";
     {
         DLog(@"Error advertising: %@", [error localizedDescription]);
         [_peripheralManager stopAdvertising];
-    }   
+    }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:DidStartAdvertisingNotification object:nil];
 }
 
 #pragma mark - CLLocationManagerDelegate

@@ -542,8 +542,8 @@
 			isa = PBXGroup;
 			children = (
 				8CAE84B018227B8B006CD8AC /* BLENotifier */,
-				8CAE84D318227B8B006CD8AC /* OSX BLENotifier */,
 				8CAE84CE18227B8B006CD8AC /* BLENotifierTests */,
+				8CAE84D318227B8B006CD8AC /* OSX BLENotifier */,
 				8CAE84EC18227B8C006CD8AC /* OSX BLENotifierTests */,
 			);
 			path = Application;

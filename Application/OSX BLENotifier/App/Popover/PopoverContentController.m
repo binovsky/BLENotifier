@@ -53,7 +53,7 @@
 {
     _ASSERT( !_core );
     
-    _core = [NotifierCore instance];
+    _core = [[NotifierCore instance] retain];
 }
 
 - (void)startBeaconSearching:(id)sender
