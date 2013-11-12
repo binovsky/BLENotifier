@@ -34,6 +34,7 @@
 - (void)initBeacon
 {
     _ASSERT( !_serviceUUID );
+    _ASSERT( !_peripherals );
     
     _serviceUUID = [[CBUUID UUIDWithString:SERVICE_UUID] retain];
     _peripherals = [[NSMutableArray alloc] initWithCapacity:0];
@@ -63,6 +64,8 @@
 - (void)stopCentralRoleSession
 {
     [_centralManager stopScan];
+    [_centralManager setDelegate:nil];
+    SAFE_RELEASE( _centralManager );
 }
 
 - (BOOL)isAdvertising
@@ -100,6 +103,7 @@
         {
             NSAlert *alert = [NSAlert alertWithMessageText:@"Bluetooth Error" defaultButton:@"Cancel" alternateButton:nil otherButton:nil informativeTextWithFormat:@"Some error with your bluetooth anthena occured!"];
             [alert runModal];
+            [self stopCentralRoleSession];
         }
             break;
     }
@@ -126,8 +130,8 @@
     
     if ( [self isPeripheralAlreadyKnown:peripheral] )
     {
-        [peripheral discoverServices:nil/*@[ _serviceUUID ]*/];
         [peripheral setDelegate:self];
+        [peripheral discoverServices:nil/*@[ _serviceUUID ]*/];
     }
 }
 

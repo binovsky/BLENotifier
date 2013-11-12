@@ -54,13 +54,13 @@
     _ASSERT( !_core );
     
     _core = [[NotifierCore instance] retain];
+    [_core initBeacon];
 }
 
 - (void)startBeaconSearching:(id)sender
 {
     _ASSERT( _core );
     
-    [_core initBeacon];
     [_core startCentralRoleSession];
 }
 
