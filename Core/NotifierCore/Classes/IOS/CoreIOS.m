@@ -98,7 +98,7 @@ const static NSString*  BEACON_IDENTIFIER       = @"com.binovsky.BLENotifier";
     [_peripheralManager removeAllServices];
     SAFE_RELEASE( _peripheralManager );
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:DidStopAdvertisingNotification object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:PeripheralDidStopAdvertisingNotification object:nil];
 }
 
 - (void)startCentralRoleSession
@@ -189,7 +189,7 @@ const static NSString*  BEACON_IDENTIFIER       = @"com.binovsky.BLENotifier";
         [_peripheralManager stopAdvertising];
     }
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:DidStartAdvertisingNotification object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:PeripheralDidStartAdvertisingNotification object:nil];
 }
 
 #pragma mark - CLLocationManagerDelegate
@@ -256,7 +256,7 @@ const static NSString*  BEACON_IDENTIFIER       = @"com.binovsky.BLENotifier";
     }
     else
     {
-        strProximity = @"UIDENTIFIED STATE";
+        strProximity = @"UNIDENTIFIED STATE";
     }
     
     log = [log stringByAppendingString:@"PROXIMITY: "];

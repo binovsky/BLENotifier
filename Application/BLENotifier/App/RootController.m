@@ -15,7 +15,7 @@
     UIButton *_listenerButton;
 }
 
-@end
+@end`
 
 @implementation RootController
 
@@ -43,8 +43,8 @@
     _core = [NotifierCore instance];
     [_core initBeacon];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didStartAdvertising:) name:DidStartAdvertisingNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didStopAdvertising:) name:DidStopAdvertisingNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didStartAdvertising:) name:PeripheralDidStartAdvertisingNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didStopAdvertising:) name:PeripheralDidStopAdvertisingNotification object:nil];
     
     _ASSERT( !_beaconButton );
     _beaconButton = [[UIButton buttonWithType:UIButtonTypeSystem] retain];

@@ -15,9 +15,18 @@
 extern NSString*  SERVICE_UUID;
 
 // NOTIFICATIONS
-extern NSString* DidStartAdvertisingNotification;
-extern NSString* DidStopAdvertisingNotification;
-extern NSString* DidFaildToStartAdvertisingNotification;
+extern NSString* PeripheralDidStartAdvertisingNotification;
+extern NSString* PeripheralDidStopAdvertisingNotification;
+extern NSString* PeripheralDidFaildToStartAdvertisingNotification;
+
+extern NSString* CentralDidDiscoverPeripheral;
+extern NSString* CentralDidConnectPeripheral;
+extern NSString* CentralDidDisconnectPeripheral;
+extern NSString* CentralDidFailConnectPeripheral;
+extern NSString* CentralDidFoundPeripheralServices;
+extern NSString* CentralDidNotFoundPeripheralServices;
+extern NSString* CentralDidFoundPeripheralServiceCharacteristics;
+extern NSString* CentralDidNotFoundPeripheralServiceCharacteristics;
 
 #pragma mark - @interface NotifierCore
 @interface NotifierCore : NSObject
@@ -34,5 +43,8 @@ extern NSString* DidFaildToStartAdvertisingNotification;
     - (void)startCentralRoleSession;
     - (void)stopCentralRoleSession;
     - (BOOL)isAdvertising;
+    - (BOOL)isScanning;
+    - (BOOL)isConnected;
+    - (NSArray *)peripherals;
 
 @end

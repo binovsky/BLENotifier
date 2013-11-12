@@ -27,6 +27,7 @@
 
 - (void)dealloc
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     SAFE_RELEASE( _core );
     
     [super dealloc];
@@ -53,6 +54,15 @@
 {
     _ASSERT( !_core );
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didDiscoveredPeripheral:) name:CentralDidDiscoverPeripheral object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didConnectPeripheral:) name:CentralDidConnectPeripheral object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didDisconnectPeripheral:) name:CentralDidDisconnectPeripheral object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didFailToConnectPeripheral:) name:CentralDidFailConnectPeripheral object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didFoundPeripheralServices:) name:CentralDidFoundPeripheralServices object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didNotFoundPeripheralServices:) name:CentralDidNotFoundPeripheralServices object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didFoundServiceCharactestics:) name:CentralDidFoundPeripheralServiceCharacteristics object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didNotFoundServiceCharactestics:) name:CentralDidNotFoundPeripheralServiceCharacteristics object:nil];
+    
     _core = [[NotifierCore instance] retain];
     [_core initBeacon];
 }
@@ -68,6 +78,47 @@
 - (void)popoverContentView:(PopoverContentView *)popover startSeekingButtonTapped:(NSButton *)btn
 {
     [self startBeaconSearching:btn];
+}
+
+#pragma mark - Core Central role notificaitons
+- (void)didDiscoveredPeripheral:(NSNotification *)aNotification
+{
+    
+}
+
+- (void)didConnectPeripheral:(NSNotification *)aNotification
+{
+    
+}
+
+- (void)didDisconnectPeripheral:(NSNotification *)aNotification
+{
+    
+}
+
+- (void)didFailToConnectPeripheral:(NSNotification *)aNotification
+{
+    
+}
+
+- (void)didFoundPeripheralServices:(NSNotification *)aNotification
+{
+    
+}
+
+- (void)didNotFoundPeripheralServices:(NSNotification *)aNotification
+{
+    
+}
+
+- (void)didFoundServiceCharactestics:(NSNotification *)aNotification
+{
+    
+}
+
+- (void)didNotFoundServiceCharactestics:(NSNotification *)aNotification
+{
+    
 }
 
 @end

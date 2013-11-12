@@ -24,9 +24,18 @@
 const NSString*  SERVICE_UUID    = @"BDFDA27E-2B3E-4FAF-A68C-EF04DC79594D";
 
 // NOTIFICATIONS
-const NSString* DidStartAdvertisingNotification = @"DidStartAdvertisingNotification";
-const NSString* DidStopAdvertisingNotification = @"DidStopAdvertisingNotification";
-const NSString* DidFaildToStartAdvertisingNotification = @"DidFaildToStartAdvertisingNotification";
+const NSString* PeripheralDidStartAdvertisingNotification = @"PeripheralDidStartAdvertisingNotification";
+const NSString* PeripheralDidStopAdvertisingNotification = @"PeripheralDidStopAdvertisingNotification";
+const NSString* PeripheralDidFaildToStartAdvertisingNotification = @"PeripheralDidFaildToStartAdvertisingNotification";
+
+const NSString* CentralDidDiscoverPeripheral = @"CentralDidDiscoverPeripheral";
+const NSString* CentralDidConnectPeripheral = @"CentralDidConnectPeripheral";
+const NSString* CentralDidDisconnectPeripheral = @"CentralDidDisconnectPeripheral";
+const NSString* CentralDidFailConnectPeripheral = @"CentralDidFailConnectPeripheral";
+const NSString* CentralDidFoundPeripheralServices = @"CentralDidFoundPeripheralServices";
+const NSString* CentralDidNotFoundPeripheralServices = @"CentralDidNotFoundPeripheralServices";
+const NSString* CentralDidFoundPeripheralServiceCharacteristics = @"CentralDidFoundPeripheralServiceCharacteristics";
+const NSString* CentralDidNotFoundPeripheralServiceCharacteristics = @"CentralDidNotFoundPeripheralServiceCharacteristics";
 
 #pragma mark - private @interface NotifierCore
 @interface NotifierCore()
