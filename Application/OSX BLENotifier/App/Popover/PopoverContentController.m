@@ -72,6 +72,8 @@
     _ASSERT( _core );
     
     [_core startCentralRoleSession];
+    
+    [(PopoverContentView *)[self view] searchingForPeripheralsAppereance];
 }
 
 #pragma mark - PopoverContentViewDelegate
@@ -80,45 +82,62 @@
     [self startBeaconSearching:btn];
 }
 
+ - (id<NSTableViewDataSource>)popoverContentViewPeripheralsListDataSource
+{
+    return self;
+}
+
 #pragma mark - Core Central role notificaitons
 - (void)didDiscoveredPeripheral:(NSNotification *)aNotification
 {
-    
+    DLog( @"%@", NSStringFromSelector( _cmd ) );
+    [(PopoverContentView *)[self view] peripheralListAppereance];
 }
 
 - (void)didConnectPeripheral:(NSNotification *)aNotification
 {
-    
+    DLog( @"%@", NSStringFromSelector( _cmd ) );
 }
 
 - (void)didDisconnectPeripheral:(NSNotification *)aNotification
 {
-    
+    DLog( @"%@", NSStringFromSelector( _cmd ) );
 }
 
 - (void)didFailToConnectPeripheral:(NSNotification *)aNotification
 {
-    
+    DLog( @"%@", NSStringFromSelector( _cmd ) );
 }
 
 - (void)didFoundPeripheralServices:(NSNotification *)aNotification
 {
-    
+    DLog( @"%@", NSStringFromSelector( _cmd ) );
 }
 
 - (void)didNotFoundPeripheralServices:(NSNotification *)aNotification
 {
-    
+    DLog( @"%@", NSStringFromSelector( _cmd ) );
 }
 
 - (void)didFoundServiceCharactestics:(NSNotification *)aNotification
 {
-    
+    DLog( @"%@", NSStringFromSelector( _cmd ) );
 }
 
 - (void)didNotFoundServiceCharactestics:(NSNotification *)aNotification
 {
-    
+    DLog( @"%@", NSStringFromSelector( _cmd ) );
+}
+
+#pragma mark - NSTableViewDataSource
+- (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex
+{
+    return @"AAAAAAA";
+}
+
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView
+{
+    return [[_core peripherals] count];
 }
 
 @end

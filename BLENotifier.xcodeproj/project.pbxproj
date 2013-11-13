@@ -25,6 +25,9 @@
 		8C852AE3182818C7008F041C /* UIAlertView+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C852AE1182818C7008F041C /* UIAlertView+Extensions.h */; };
 		8C852AE4182818C7008F041C /* UIAlertView+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C852AE2182818C7008F041C /* UIAlertView+Extensions.m */; };
 		8C852AE5182818C7008F041C /* UIAlertView+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C852AE2182818C7008F041C /* UIAlertView+Extensions.m */; };
+		8CACE6D01833E42000AE1DA4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CACE6CF1833E42000AE1DA4 /* QuartzCore.framework */; };
+		8CACE6D21833E42C00AE1DA4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CACE6D11833E42C00AE1DA4 /* QuartzCore.framework */; };
+		8CACE6D51833E70200AE1DA4 /* ProgressIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CACE6D41833E70200AE1DA4 /* ProgressIndicator.m */; };
 		8CAD2E62181ED28F007C5743 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAD2E61181ED28F007C5743 /* CoreLocation.framework */; };
 		8CAD2E63181ED2B2007C5743 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB1AF3E181AB955008E0D53 /* CoreBluetooth.framework */; };
 		8CAD2E64181ED2B9007C5743 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAD2E61181ED28F007C5743 /* CoreLocation.framework */; };
@@ -209,6 +212,10 @@
 		8C852ADF18280601008F041C /* Library.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Library.h; sourceTree = "<group>"; };
 		8C852AE1182818C7008F041C /* UIAlertView+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Extensions.h"; sourceTree = "<group>"; };
 		8C852AE2182818C7008F041C /* UIAlertView+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Extensions.m"; sourceTree = "<group>"; };
+		8CACE6CF1833E42000AE1DA4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		8CACE6D11833E42C00AE1DA4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8CACE6D31833E70200AE1DA4 /* ProgressIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressIndicator.h; sourceTree = "<group>"; };
+		8CACE6D41833E70200AE1DA4 /* ProgressIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressIndicator.m; sourceTree = "<group>"; };
 		8CAD2E61181ED28F007C5743 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8CAE846918227A91006CD8AC /* libOSXLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOSXLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAE847518227A91006CD8AC /* OSXLibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSXLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -306,6 +313,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CACE6D21833E42C00AE1DA4 /* QuartzCore.framework in Frameworks */,
 				8CAD2E64181ED2B9007C5743 /* CoreLocation.framework in Frameworks */,
 				8CAD2E63181ED2B2007C5743 /* CoreBluetooth.framework in Frameworks */,
 				8CDD83FD181AF9D700088864 /* libNotifierCore.a in Frameworks */,
@@ -378,6 +386,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CACE6D01833E42000AE1DA4 /* QuartzCore.framework in Frameworks */,
 				8CAE872718228546006CD8AC /* libOSX NotifierCore.a in Frameworks */,
 				8CF29A221821B37C00428BA5 /* IOBluetoothUI.framework in Frameworks */,
 				8CF29A211821B36F00428BA5 /* IOBluetooth.framework in Frameworks */,
@@ -490,6 +499,8 @@
 		8C36FFEC17F4C6E4004860B5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8CACE6D11833E42C00AE1DA4 /* QuartzCore.framework */,
+				8CACE6CF1833E42000AE1DA4 /* QuartzCore.framework */,
 				8CF29A441821BD0B00428BA5 /* CFNetwork.framework */,
 				8CF29A421821BD0200428BA5 /* CoreLocation.framework */,
 				8CF29A191821B32200428BA5 /* IOBluetooth.framework */,
@@ -534,6 +545,8 @@
 			children = (
 				8C6A93DC182EA3AA00A0F48B /* PopoverContentView.h */,
 				8C6A93DD182EA3AA00A0F48B /* PopoverContentView.m */,
+				8CACE6D31833E70200AE1DA4 /* ProgressIndicator.h */,
+				8CACE6D41833E70200AE1DA4 /* ProgressIndicator.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1211,6 +1224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CACE6D51833E70200AE1DA4 /* ProgressIndicator.m in Sources */,
 				8CAE85F518227B8C006CD8AC /* OSX_BLENotifier.xcdatamodeld in Sources */,
 				8C6A93D2182E840D00A0F48B /* BarItemView.m in Sources */,
 				8CAE85E018227B8C006CD8AC /* main.m in Sources */,

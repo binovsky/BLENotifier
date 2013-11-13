@@ -7,5 +7,6 @@
 #ifdef __OBJC__
     #import <Cocoa/Cocoa.h>
     #import <Common/Common.h>
+    #import <QuartzCore/QuartzCore.h>
     #import <NotifierCore/NotifierCore.h>
 #endif

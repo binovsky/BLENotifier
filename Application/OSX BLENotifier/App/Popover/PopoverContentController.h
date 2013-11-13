@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 @protocol PopoverContentViewDelegate;
 
-@interface PopoverContentController : NSViewController < PopoverContentViewDelegate >
+@interface PopoverContentController : NSViewController < PopoverContentViewDelegate, NSTableViewDataSource >
 {
     NotifierCore *_core;
 }
