@@ -4,3 +4,9 @@ BLENotifier.xcscheme
 NotifierCore.xcscheme
 
 /BLENotifier.xcodeproj/xcuserdata/mbinovsky.xcuserdatad/xcschemes/BLENotifier.xcscheme
+
+/.DS_Store
+
+/BLENotifier.xcodeproj/project.xcworkspace/xcshareddata/
+
+/BLENotifier.xcodeproj/project.xcworkspace/xcuserdata/
